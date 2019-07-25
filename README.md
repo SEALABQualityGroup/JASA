@@ -1,1 +1,1 @@
-# UML2PN
+# UML2GSPN
