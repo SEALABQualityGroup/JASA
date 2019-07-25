@@ -1,0 +1,513 @@
+transformation UMLDY-GSPN (uml:umlsm, pn:ptnet) {
+
+    /***** UMLSD-GSPN *****/
+
+    top relation StateMachine2PetriNet {
+    
+        name: String;
+        
+        enforce domain uml statemachine:umlsm::StateMachine {
+            name = name,
+            region = r : umlsm::Region {}
+        };
+        
+        enforce domain pn petrinet : ptnet::PetriNet {
+            id = name,
+            pages = p : ptnet::Page {}
+        };
+        
+        where {
+        	State2Pattern(r, p);
+        	StateActivity2Pattern(r, p);
+        	Transition2Pattern(r, p);
+        }
+    }
+
+    relation State2Pattern {
+    
+        enforce domain uml r : umlsm::Region {
+            subvertex = s : umlsm::State {}
+        };
+        
+        enforce domain pn p : ptnet::Page {
+            objects = s : ptnet::Place {}
+        };
+        enforce domain pn p : ptnet::Page {
+            objects = s1 : ptnet::Transition {
+                transitionKind = "immediate"
+            }
+        };
+        enforce domain pn p : ptnet::Page {
+            objects = s2 : ptnet::Arc {
+                source = s : ptnet::Place {}
+                target = s1 : ptnet::Transition {}
+            }
+        };
+        
+        where {
+            s.doActivity.oclIsUndefined()
+        }
+    }
+    
+    relation StateActivity2Pattern {
+    
+        enforce domain uml r : umlsm::Region {
+            subvertex = s : umlsm::State {
+                doActivity = a : umlsm::Activity {}
+            }
+        };
+        
+        enforce domain pn p : ptnet::Page {
+            objects = s : ptnet::Place {}
+        };
+        enforce domain pn p : ptnet::Page {
+            objects = s1 : ptnet::Transition {
+                transitionKind = "immediate"
+            }
+        };
+        enforce domain pn p : ptnet::Page {
+            objects = s2 : ptnet::Arc {
+                source = s : ptnet::Place {}
+                target = s1 : ptnet::Transition {}
+            }
+        };
+        enforce domain pn p : ptnet::Page {
+            objects = s3 : ptnet::Place {}
+        };
+        enforce domain pn p : ptnet::Page {
+            objects = s4 : ptnet::Arc {
+                source = s1 : ptnet::Transition {}
+                target = s3 : ptnet::Place {}
+            }
+        };
+        enforce domain pn p : ptnet::Page {
+            objects = s5 : ptnet::Transition {
+                transitionKind = "exponential"
+            }
+        };
+        enforce domain pn p : ptnet::Page {
+            objects = s6 : ptnet::Arc {
+                source = s3 : ptnet::Place {}
+                target = s5 : ptnet::Transition {}
+            }
+        };
+    }
+    
+    /* Transition leaving a state WITHOUT activity */
+    relation Transition2Pattern {
+    
+        enforce domain uml region : umlsm::Region {
+            transition = t : umlsm::Transition {
+                source = s : umlsm::State {}
+            }
+        };
+        
+        enforce domain pn page : ptnet::Page {
+            objects = t : ptnet::Place {}
+        };
+        enforce domain pn page : ptnet::Page {
+            objects = t1 : ptnet::Transition {
+                transitionKind = "immediate"
+            }
+        };
+        enforce domain pn page : ptnet::Page {
+            objects = t2 : ptnet::Arc {
+                source = t : ptnet::Place {}
+                target = t1 : ptnet::Transition {}
+            }
+        };
+        enforce domain pn page : ptnet::Page {
+            objects = t3 : ptnet::Arc {
+                source = t : ptnet::Place {}
+                target = s1 : ptnet::Transition {}
+            }
+        };
+        enforce domain pn page : ptnet::Page {
+            objects = t4 : ptnet::Place {}
+        };
+        enforce domain pn page : ptnet::Page {
+            objects = t5 : ptnet::Arc {
+                source = s1 : ptnet::Transition {}
+                target = t4 : ptnet::Place {}
+            }
+        };
+        enforce domain pn page : ptnet::Page {
+            objects = t6 : ptnet::Transition {
+                transitionKind = "immediate"
+            }
+        };
+        enforce domain pn page : ptnet::Page {
+            objects = t7 : ptnet::Arc {
+                source = t4 : ptnet::Place {}
+                target = t6 : ptnet::Transition {}
+            }
+        };
+        
+        when {
+            State2Pattern(s, s1);
+        }
+    }
+    
+    /* Transition leaving a state WITH activity */
+    relation Transition2Pattern {
+    
+        enforce domain uml region : umlsm::Region {
+            transition = t : umlsm::Transition {
+                source = s : umlsm::State {}
+            }
+        };
+        
+        enforce domain pn page : ptnet::Page {
+            objects = t : ptnet::Place {}
+        };
+        enforce domain pn page : ptnet::Page {
+            objects = t1 : ptnet::Transition {
+                transitionKind = "immediate"
+            }
+        };
+        enforce domain pn page : ptnet::Page {
+            objects = t2 : ptnet::Arc {
+                source = t : ptnet::Place {}
+                target = t1 : ptnet::Transition {}
+            }
+        };
+        enforce domain pn page : ptnet::Page {
+            objects = t3 : ptnet::Arc {
+                source = t : ptnet::Place {}
+                target = s1 : ptnet::Transition {}
+            }
+        };
+        enforce domain pn page : ptnet::Page {
+            objects = t4 : ptnet::Place {}
+        };
+        enforce domain pn page : ptnet::Page {
+            objects = t5 : ptnet::Arc {
+                source = s1 : ptnet::Transition {}
+                target = t4 : ptnet::Place {}
+            }
+        };
+        enforce domain pn page : ptnet::Page {
+            objects = t6 : ptnet::Transition {
+                transitionKind = "immediate"
+            }
+        };
+        enforce domain pn page : ptnet::Page {
+            objects = t7 : ptnet::Arc {
+                source = t4 : ptnet::Place {}
+                target = t6 : ptnet::Transition {}
+            }
+        };
+        
+        when {
+        	StateActivity2Pattern(s, s1);
+        }
+    }
+    
+    /* DaStep (Transition) leaving a state WITHOUT activity */
+    relation TransitionDaStep2Pattern {
+    
+    	name : String;
+    	prob : String;
+    
+        enforce domain uml region : umlsm::Region {
+            transition = t : umlsm::DaStep {
+            	name = name,
+            	occurrenceProb = prob,
+                source = s : umlsm::State {}
+            }
+        };
+        
+        enforce domain pn page : ptnet::Page {
+            objects = t : ptnet::Place {}
+        };
+        enforce domain pn page : ptnet::Page {
+            objects = t1 : ptnet::Transition {
+            	id = name,
+            	weight = prob
+                transitionKind = "immediate"
+            }
+        };
+        enforce domain pn page : ptnet::Page {
+            objects = t2 : ptnet::Arc {
+                source = t : ptnet::Place {}
+                target = t1 : ptnet::Transition {}
+            }
+        };
+        enforce domain pn page : ptnet::Page {
+            objects = t3 : ptnet::Arc {
+                source = t : ptnet::Place {}
+                target = s1 : ptnet::Transition {}
+            }
+        };
+        enforce domain pn page : ptnet::Page {
+            objects = t4 : ptnet::Place {}
+        };
+        enforce domain pn page : ptnet::Page {
+            objects = t5 : ptnet::Arc {
+                source = s1 : ptnet::Transition {}
+                target = t4 : ptnet::Place {}
+            }
+        };
+        enforce domain pn page : ptnet::Page {
+            objects = t6 : ptnet::Transition {
+                transitionKind = "immediate" 
+            }
+        };
+        enforce domain pn page : ptnet::Page {
+            objects = t7 : ptnet::Arc {
+                source = t4 : ptnet::Place {}
+                target = t6 : ptnet::Transition {}
+            }
+        };
+        
+        when {
+            State2Pattern(s, s1);
+        }
+    }
+    
+    /* DaStep (Transition) leaving a state WITH activity */
+    relation Transition2Pattern {
+    
+        enforce domain uml region : umlsm::Region {
+            transition = t : umlsm::DaStep {
+                source = s : umlsm::State {}
+            }
+        };
+        
+        enforce domain pn page : ptnet::Page {
+            objects = t : ptnet::Place {}
+        };
+        enforce domain pn page : ptnet::Page {
+            objects = t1 : ptnet::Transition {
+                transitionKind = "immediate"
+            }
+        };
+        enforce domain pn page : ptnet::Page {
+            objects = t2 : ptnet::Arc {
+                source = t : ptnet::Place {}
+                target = t1 : ptnet::Transition {}
+            }
+        };
+        enforce domain pn page : ptnet::Page {
+            objects = t3 : ptnet::Arc {
+                source = t : ptnet::Place {}
+                target = s1 : ptnet::Transition {}
+            }
+        };
+        enforce domain pn page : ptnet::Page {
+            objects = t4 : ptnet::Place {}
+        };
+        enforce domain pn page : ptnet::Page {
+            objects = t5 : ptnet::Arc {
+                source = s1 : ptnet::Transition {}
+                target = t4 : ptnet::Place {}
+            }
+        };
+        enforce domain pn page : ptnet::Page {
+            objects = t6 : ptnet::Transition {
+                transitionKind = "immediate"
+            }
+        };
+        enforce domain pn page : ptnet::Page {
+            objects = t7 : ptnet::Arc {
+                source = t4 : ptnet::Place {}
+                target = t6 : ptnet::Transition {}
+            }
+        };
+        
+        when {
+            StateActivity2Pattern(s, s1);
+        }
+    }
+    
+    /***** UMLSD-GSPN *****/
+
+    relation Lifeline2Page {
+        name : String;
+        enforce domain uml m : umlsm::Lifeline {
+            name = name
+                represents = r : umlsm::Property {
+                    type = c : umlsm::Component {
+					name = name
+				}
+			}
+		};
+		checkonly domain pn p : ptnet::Page {
+			id = name
+		};
+		when {
+			Component2Page(c, p);
+		}
+	}
+
+	relation MessageSynch2Pattern {
+		enforce domain uml m : umlsm::Message {
+			messageSort = "synchCall"
+			
+			receiveEvent = re : umlsm::MessageOccurrenceSpecification {
+				covered = l1 : umlsm::Lifeline {}
+			}
+			
+			sendEvent = se : umlsm::MessageOccurrenceSpecification {
+				covered = l2 : umlsm::Lifeline {}
+			}
+		};
+		enforce domain pn p : ptnet::Page {
+            objects = s : ptnet::Place {}
+        };
+        enforce domain pn p : ptnet::Page {
+            objects = s1 : ptnet::Transition {
+                transitionKind = "immediate"
+            }
+        };
+        enforce domain pn p : ptnet::Page {
+            objects = s2 : ptnet::Arc {
+                source = s : ptnet::Place {}
+                target = s1 : ptnet::Transition {}
+            }
+        };
+        enforce domain pn p : ptnet::Page {
+            objects = s3 : ptnet::Arc {
+                source = c : ptnet::Transition {}
+                target = s : ptnet::Place {}
+            }
+        };
+        enforce domain pn p : ptnet::Page {
+            objects = s4 : ptnet::Arc {
+                source = s1 : ptnet::Transition {}
+                target = r : ptnet::Place {}
+            }
+        };
+        when {
+        	State2Pattern(c, c);
+        	State2Pattern(r, r);
+        	Lifeline2Page(l1, p);
+        	Lifeline2Page(l2, p);        	
+        }
+	}
+
+	relation MessageAsynch2Pattern {
+		enforce domain uml m : umlsm::Message {
+			messageSort = "asynchCall"
+		};
+		enforce domain pn p : ptnet::Page {
+            objects = s : ptnet::Place {}
+        };
+        enforce domain pn p : ptnet::Page {
+            objects = s1 : ptnet::Transition {
+                transitionKind = "immediate"
+            }
+        };
+        enforce domain pn p : ptnet::Page {
+            objects = s2 : ptnet::Arc {
+                source = s : ptnet::Place {}
+                target = s1 : ptnet::Transition {}
+            }
+        };
+        enforce domain pn p : ptnet::Page {
+            objects = s3 : ptnet::Arc {
+                source = c : ptnet::Transition {}
+                target = s : ptnet::Place {}
+            }
+        };
+        enforce domain pn p : ptnet::Page {
+            objects = s4 : ptnet::Arc {
+                source = s1 : ptnet::Transition {}
+                target = r : ptnet::Place {}
+            }
+        };
+        when {
+        	State2Pattern(c, c);
+        	State2Pattern(r, r);
+        }
+	}	
+
+	relation MessageReply2Pattern {
+		enforce domain uml m : umlsm::Message {
+			messageSort = "reply"
+		};
+		enforce domain pn p : ptnet::Page {
+            objects = s : ptnet::Place {}
+        };
+        enforce domain pn p : ptnet::Page {
+            objects = s1 : ptnet::Arc {
+                source = r : ptnet::Transition {}
+                target = s : ptnet::Place {}
+            }
+        };
+        enforce domain pn p : ptnet::Page {
+            objects = s2 : ptnet::Arc {
+                source = s1 : ptnet::Transition {}
+                target = c : ptnet::Place {}
+            }
+        };
+        when {
+        	State2Pattern(r, r);
+        	State2Pattern(c, c);
+        }
+	}
+
+    /***** Static component updating *****/
+
+    relation Component2Page {
+        name:String;
+        enforce domain uml c:umlsm::Component {
+            name=name
+        };
+        checkonly domain pn p:ptnet::Page {
+            id=name
+        };
+    }
+   
+    relation Interface2Pattern {
+        enforce domain uml i:umlsm::Interface {
+            ownedOperation=o:umlsm::Operation {}
+        };
+        enforce domain uml receiver:umlsm::Component {
+            interfaceRealization=ir:umlsm::InterfaceRealization {
+              supplier=i:umlsm::Interface {},
+              contract=i:umlsm::Interface {}
+            }
+        };
+        enforce domain uml caller:umlsm::Component {
+            packagedElement=d:umlsm::Dependency {
+             client=caller:umlsm::Component {},
+             supplier=i:umlsm::Interface {}
+            }
+        };
+        enforce domain pn p:ptnet::Page {
+            objects=s:ptnet::Place {}
+        };
+        enforce domain pn p:ptnet::Page {
+            objects=s1:ptnet::Transition {
+             transitionKind="immediate"
+            }
+        };
+        enforce domain pn p:ptnet::Page {
+            objects=s2:ptnet::Arc {
+             source=s:ptnet::Place {}
+             target=s1:ptnet::Transition {}
+            }
+        };
+        enforce domain pn p1:ptnet::Page {
+            objects=s3:ptnet::Arc {
+             source=c:ptnet::Transition {}
+             target=s:ptnet::Place {}
+            }
+        };
+        enforce domain pn p2:ptnet::Page {
+            objects=s4:ptnet::Arc {
+             source=s1:ptnet::Transition {}
+             target=r:ptnet::Place {}
+            }
+        };
+        when {
+            Component2Page(caller, p1);
+            Component2Page(receiver, p3);
+        }
+        where {
+            s3.source.containerPage.id <> s3.target.containerPage.id;
+            s4.source.containerPage.id <> s4.target.containerPage.id;
+        }
+    }
+}

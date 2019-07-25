@@ -1,0 +1,3237 @@
+<?xml version="1.0"?>
+<pnml xmlns="http://www.pnml.org/version-2009/grammar/pnml">
+	<!-- Written by GreatSPN Editor. -->
+	<net id="SD_ManagingTemperature_SAR_TS_AR_DB" type="http://www.pnml.org/version-2009/grammar/ptnet">
+		<name>
+			<text>SD_ManagingTemperature_SAR_TS_AR_DB</text>
+		</name>
+		<page id="page0">
+			<name>
+				<text>DefaultPage</text>
+			</name>
+			<!-- List of places -->
+			<place id="GC_StandBy">
+				<name>
+					<graphics>
+						<offset x="25" y="-15"/>
+					</graphics>
+					<text>GC_StandBy</text>
+				</name>
+				<graphics>
+					<position x="1710" y="130"/>
+				</graphics>
+				<initialMarking>
+					<text>1</text>
+				</initialMarking>
+			</place>
+			<place id="GC_RetrieveSoilHumidityThreshold">
+				<name>
+					<graphics>
+						<offset x="85" y="0"/>
+					</graphics>
+					<text>GC_RetrieveSoilHumidityThreshold</text>
+				</name>
+				<graphics>
+					<position x="1730" y="320"/>
+				</graphics>
+			</place>
+			<place id="GC_triggerEnvironmentCheck">
+				<name>
+					<graphics>
+						<offset x="75" y="0"/>
+					</graphics>
+					<text>GC_triggerEnvironmentCheck</text>
+				</name>
+				<graphics>
+					<position x="1730" y="200"/>
+				</graphics>
+			</place>
+			<place id="GC_triggerEnvironmentCheck_e">
+				<name>
+					<graphics>
+						<offset x="80" y="0"/>
+					</graphics>
+					<text>GC_triggerEnvironmentCheck_e</text>
+				</name>
+				<graphics>
+					<position x="1770" y="160"/>
+				</graphics>
+			</place>
+			<place id="GC_BeginEnvironmentCheck">
+				<name>
+					<graphics>
+						<offset x="70" y="0"/>
+					</graphics>
+					<text>GC_BeginEnvironmentCheck</text>
+				</name>
+				<graphics>
+					<position x="1730" y="260"/>
+				</graphics>
+			</place>
+			<place id="GC_triggerTemperatureCheck">
+				<name>
+					<graphics>
+						<offset x="-70" y="0"/>
+					</graphics>
+					<text>GC_triggerTemperatureCheck</text>
+				</name>
+				<graphics>
+					<position x="1370" y="200"/>
+				</graphics>
+			</place>
+			<place id="GC_triggerTemperatureCheck_e">
+				<name>
+					<graphics>
+						<offset x="-75" y="0"/>
+					</graphics>
+					<text>GC_triggerTemperatureCheck_e</text>
+				</name>
+				<graphics>
+					<position x="1330" y="160"/>
+				</graphics>
+			</place>
+			<place id="GC_BeginTemperatureCheck">
+				<name>
+					<graphics>
+						<offset x="-70" y="0"/>
+					</graphics>
+					<text>GC_BeginTemperatureCheck</text>
+				</name>
+				<graphics>
+					<position x="1370" y="260"/>
+				</graphics>
+			</place>
+			<place id="GC_monitorHumidity">
+				<name>
+					<graphics>
+						<offset x="55" y="0"/>
+					</graphics>
+					<text>GC_monitorHumidity</text>
+				</name>
+				<graphics>
+					<position x="1950" y="200"/>
+				</graphics>
+			</place>
+			<place id="GC_monitorHumidity_e">
+				<name>
+					<graphics>
+						<offset x="60" y="0"/>
+					</graphics>
+					<text>GC_monitorHumidity_e</text>
+				</name>
+				<graphics>
+					<position x="1990" y="160"/>
+				</graphics>
+			</place>
+			<place id="GC_BeginHumidityMonitoring">
+				<name>
+					<graphics>
+						<offset x="75" y="0"/>
+					</graphics>
+					<text>GC_BeginHumidityMonitoring</text>
+				</name>
+				<graphics>
+					<position x="1950" y="260"/>
+				</graphics>
+			</place>
+			<place id="GC_getTemperatureData">
+				<name>
+					<graphics>
+						<offset x="-65" y="0"/>
+					</graphics>
+					<text>GC_getTemperatureData</text>
+				</name>
+				<graphics>
+					<position x="1370" y="330"/>
+				</graphics>
+			</place>
+			<place id="GC_getTemperatureData_e">
+				<name>
+					<graphics>
+						<offset x="-70" y="0"/>
+					</graphics>
+					<text>GC_getTemperatureData_e</text>
+				</name>
+				<graphics>
+					<position x="1330" y="290"/>
+				</graphics>
+			</place>
+			<place id="GC_CheckTemperature">
+				<name>
+					<graphics>
+						<offset x="-60" y="0"/>
+					</graphics>
+					<text>GC_CheckTemperature</text>
+				</name>
+				<graphics>
+					<position x="1370" y="390"/>
+				</graphics>
+			</place>
+			<place id="GC_getTemperatureThreshold">
+				<name>
+					<graphics>
+						<offset x="-75" y="0"/>
+					</graphics>
+					<text>GC_getTemperatureThreshold</text>
+				</name>
+				<graphics>
+					<position x="1370" y="460"/>
+				</graphics>
+			</place>
+			<place id="GC_getTemperatureThreshold_e">
+				<name>
+					<graphics>
+						<offset x="-80" y="0"/>
+					</graphics>
+					<text>GC_getTemperatureThreshold_e</text>
+				</name>
+				<graphics>
+					<position x="1330" y="420"/>
+				</graphics>
+			</place>
+			<place id="GC_CheckTemperatureThreshold_a">
+				<name>
+					<graphics>
+						<offset x="-85" y="0"/>
+					</graphics>
+					<text>GC_CheckTemperatureThreshold_a</text>
+				</name>
+				<graphics>
+					<position x="1370" y="520"/>
+				</graphics>
+			</place>
+			<place id="GC_raiseTemperature">
+				<name>
+					<graphics>
+						<offset x="-60" y="0"/>
+					</graphics>
+					<text>GC_raiseTemperature</text>
+				</name>
+				<graphics>
+					<position x="1350" y="580"/>
+				</graphics>
+			</place>
+			<place id="GC_decreaseTemperature">
+				<name>
+					<graphics>
+						<offset x="65" y="0"/>
+					</graphics>
+					<text>GC_decreaseTemperature</text>
+				</name>
+				<graphics>
+					<position x="1390" y="580"/>
+				</graphics>
+			</place>
+			<place id="GC_getTemperatureData2">
+				<name>
+					<graphics>
+						<offset x="65" y="0"/>
+					</graphics>
+					<text>GC_getTemperatureData2</text>
+				</name>
+				<graphics>
+					<position x="1730" y="380"/>
+				</graphics>
+			</place>
+			<place id="GC_getTemperatureData_e2">
+				<name>
+					<graphics>
+						<offset x="-70" y="0"/>
+					</graphics>
+					<text>GC_getTemperatureData_e2</text>
+				</name>
+				<graphics>
+					<position x="1690" y="350"/>
+				</graphics>
+			</place>
+			<place id="GC_EnvCheckTemperature">
+				<name>
+					<graphics>
+						<offset x="70" y="0"/>
+					</graphics>
+					<text>GC_EnvCheckTemperature</text>
+				</name>
+				<graphics>
+					<position x="1730" y="440"/>
+				</graphics>
+			</place>
+			<place id="GC_getHumidityData2">
+				<name>
+					<graphics>
+						<offset x="55" y="0"/>
+					</graphics>
+					<text>GC_getHumidityData2</text>
+				</name>
+				<graphics>
+					<position x="1730" y="500"/>
+				</graphics>
+			</place>
+			<place id="GC_getHumidityData_e2">
+				<name>
+					<graphics>
+						<offset x="-60" y="0"/>
+					</graphics>
+					<text>GC_getHumidityData_e2</text>
+				</name>
+				<graphics>
+					<position x="1690" y="470"/>
+				</graphics>
+			</place>
+			<place id="GC_EnvCheckHumidity">
+				<name>
+					<graphics>
+						<offset x="60" y="0"/>
+					</graphics>
+					<text>GC_EnvCheckHumidity</text>
+				</name>
+				<graphics>
+					<position x="1730" y="560"/>
+				</graphics>
+			</place>
+			<place id="GC_getSoilHumidityData2">
+				<name>
+					<graphics>
+						<offset x="65" y="0"/>
+					</graphics>
+					<text>GC_getSoilHumidityData2</text>
+				</name>
+				<graphics>
+					<position x="1730" y="620"/>
+				</graphics>
+			</place>
+			<place id="GC_getSoilHumidityData_e2">
+				<name>
+					<graphics>
+						<offset x="-70" y="0"/>
+					</graphics>
+					<text>GC_getSoilHumidityData_e2</text>
+				</name>
+				<graphics>
+					<position x="1690" y="590"/>
+				</graphics>
+			</place>
+			<place id="GC_EnvCheckSoilHumidity">
+				<name>
+					<graphics>
+						<offset x="70" y="0"/>
+					</graphics>
+					<text>GC_EnvCheckSoilHumidity</text>
+				</name>
+				<graphics>
+					<position x="1730" y="680"/>
+				</graphics>
+			</place>
+			<place id="GC_getEnvironmentThresholds">
+				<name>
+					<graphics>
+						<offset x="75" y="0"/>
+					</graphics>
+					<text>GC_getEnvironmentThresholds</text>
+				</name>
+				<graphics>
+					<position x="1730" y="740"/>
+				</graphics>
+			</place>
+			<place id="GC_getEnvironmentThresholds_e">
+				<name>
+					<graphics>
+						<offset x="-80" y="0"/>
+					</graphics>
+					<text>GC_getEnvironmentThresholds_e</text>
+				</name>
+				<graphics>
+					<position x="1690" y="710"/>
+				</graphics>
+			</place>
+			<place id="GC_CheckEnvironmentThresholds">
+				<name>
+					<graphics>
+						<offset x="80" y="0"/>
+					</graphics>
+					<text>GC_CheckEnvironmentThresholds</text>
+				</name>
+				<graphics>
+					<position x="1730" y="800"/>
+				</graphics>
+			</place>
+			<place id="GC_getHumidityData">
+				<name>
+					<graphics>
+						<offset x="55" y="0"/>
+					</graphics>
+					<text>GC_getHumidityData</text>
+				</name>
+				<graphics>
+					<position x="1950" y="330"/>
+				</graphics>
+			</place>
+			<place id="GC_getHumidityData_e">
+				<name>
+					<graphics>
+						<offset x="60" y="0"/>
+					</graphics>
+					<text>GC_getHumidityData_e</text>
+				</name>
+				<graphics>
+					<position x="1990" y="290"/>
+				</graphics>
+			</place>
+			<place id="GC_CheckHumidity">
+				<name>
+					<graphics>
+						<offset x="55" y="0"/>
+					</graphics>
+					<text>GC_CheckHumidity</text>
+				</name>
+				<graphics>
+					<position x="1950" y="390"/>
+				</graphics>
+			</place>
+			<place id="GC_getHumidityThreshold">
+				<name>
+					<graphics>
+						<offset x="65" y="0"/>
+					</graphics>
+					<text>GC_getHumidityThreshold</text>
+				</name>
+				<graphics>
+					<position x="1950" y="460"/>
+				</graphics>
+			</place>
+			<place id="GC_getHumidityThreshold_e">
+				<name>
+					<graphics>
+						<offset x="70" y="0"/>
+					</graphics>
+					<text>GC_getHumidityThreshold_e</text>
+				</name>
+				<graphics>
+					<position x="1990" y="420"/>
+				</graphics>
+			</place>
+			<place id="GC_CheckHumidityThreshold">
+				<name>
+					<graphics>
+						<offset x="70" y="0"/>
+					</graphics>
+					<text>GC_CheckHumidityThreshold</text>
+				</name>
+				<graphics>
+					<position x="1950" y="520"/>
+				</graphics>
+			</place>
+			<place id="GC_notify">
+				<name>
+					<graphics>
+						<offset x="35" y="0"/>
+					</graphics>
+					<text>GC_notify</text>
+				</name>
+				<graphics>
+					<position x="1950" y="590"/>
+				</graphics>
+			</place>
+			<place id="GC_notify_e">
+				<name>
+					<graphics>
+						<offset x="40" y="0"/>
+					</graphics>
+					<text>GC_notify_e</text>
+				</name>
+				<graphics>
+					<position x="1990" y="550"/>
+				</graphics>
+			</place>
+			<place id="GC_NotifyMobileApp">
+				<name>
+					<graphics>
+						<offset x="55" y="0"/>
+					</graphics>
+					<text>GC_NotifyMobileApp</text>
+				</name>
+				<graphics>
+					<position x="1950" y="650"/>
+				</graphics>
+			</place>
+			<place id="TS_StandBy">
+				<name>
+					<graphics>
+						<offset x="40" y="0"/>
+					</graphics>
+					<text>TS_StandBy</text>
+				</name>
+				<graphics>
+					<position x="200" y="270"/>
+				</graphics>
+				<initialMarking>
+					<text>1</text>
+				</initialMarking>
+			</place>
+			<place id="TS_RetrieveTemperatureData">
+				<name>
+					<graphics>
+						<offset x="75" y="0"/>
+					</graphics>
+					<text>TS_RetrieveTemperatureData</text>
+				</name>
+				<graphics>
+					<position x="200" y="450"/>
+				</graphics>
+			</place>
+			<place id="TS_getTemperatureData">
+				<name>
+					<graphics>
+						<offset x="65" y="0"/>
+					</graphics>
+					<text>TS_getTemperatureData</text>
+				</name>
+				<graphics>
+					<position x="200" y="330"/>
+				</graphics>
+			</place>
+			<place id="TS_getTemperatureData_e">
+				<name>
+					<graphics>
+						<offset x="-70" y="0"/>
+					</graphics>
+					<text>TS_getTemperatureData_e</text>
+				</name>
+				<graphics>
+					<position x="160" y="300"/>
+				</graphics>
+			</place>
+			<place id="TS_RetrieveTemperatureData_a">
+				<name>
+					<graphics>
+						<offset x="80" y="0"/>
+					</graphics>
+					<text>TS_RetrieveTemperatureData_a</text>
+				</name>
+				<graphics>
+					<position x="200" y="390"/>
+				</graphics>
+			</place>
+			<place id="DB_StandBy">
+				<name>
+					<graphics>
+						<offset x="25" y="-15"/>
+					</graphics>
+					<text>DB_StandBy</text>
+				</name>
+				<graphics>
+					<position x="1210" y="860"/>
+				</graphics>
+				<initialMarking>
+					<text>1</text>
+				</initialMarking>
+			</place>
+			<place id="DB_RetrieveSoilHumidityThreshold">
+				<name>
+					<graphics>
+						<offset x="85" y="0"/>
+					</graphics>
+					<text>DB_RetrieveSoilHumidityThreshold</text>
+				</name>
+				<graphics>
+					<position x="1210" y="1050"/>
+				</graphics>
+			</place>
+			<place id="DB_getSoilHumidityThreshold">
+				<name>
+					<graphics>
+						<offset x="75" y="0"/>
+					</graphics>
+					<text>DB_getSoilHumidityThreshold</text>
+				</name>
+				<graphics>
+					<position x="1210" y="930"/>
+				</graphics>
+			</place>
+			<place id="DB_getSoilHumidityThreshold_e">
+				<name>
+					<graphics>
+						<offset x="80" y="0"/>
+					</graphics>
+					<text>DB_getSoilHumidityThreshold_e</text>
+				</name>
+				<graphics>
+					<position x="1250" y="890"/>
+				</graphics>
+			</place>
+			<place id="DB_RetrieveSoilHumidityThreshold_a">
+				<name>
+					<graphics>
+						<offset x="90" y="0"/>
+					</graphics>
+					<text>DB_RetrieveSoilHumidityThreshold_a</text>
+				</name>
+				<graphics>
+					<position x="1210" y="990"/>
+				</graphics>
+			</place>
+			<place id="DB_RetrieveTemperatureThreshold">
+				<name>
+					<graphics>
+						<offset x="-85" y="0"/>
+					</graphics>
+					<text>DB_RetrieveTemperatureThreshold</text>
+				</name>
+				<graphics>
+					<position x="960" y="1050"/>
+				</graphics>
+			</place>
+			<place id="DB_getTemperatureThreshold">
+				<name>
+					<graphics>
+						<offset x="-75" y="0"/>
+					</graphics>
+					<text>DB_getTemperatureThreshold</text>
+				</name>
+				<graphics>
+					<position x="960" y="930"/>
+				</graphics>
+			</place>
+			<place id="DB_getTemperatureThreshold_e">
+				<name>
+					<graphics>
+						<offset x="-80" y="0"/>
+					</graphics>
+					<text>DB_getTemperatureThreshold_e</text>
+				</name>
+				<graphics>
+					<position x="920" y="890"/>
+				</graphics>
+			</place>
+			<place id="DB_RetrieveTemperatureThreshold_a">
+				<name>
+					<graphics>
+						<offset x="-90" y="0"/>
+					</graphics>
+					<text>DB_RetrieveTemperatureThreshold_a</text>
+				</name>
+				<graphics>
+					<position x="960" y="990"/>
+				</graphics>
+			</place>
+			<place id="DB_RetrieveHumidityThreshold">
+				<name>
+					<graphics>
+						<offset x="-80" y="0"/>
+					</graphics>
+					<text>DB_RetrieveHumidityThreshold</text>
+				</name>
+				<graphics>
+					<position x="1170" y="1050"/>
+				</graphics>
+			</place>
+			<place id="DB_getHumidityThreshold">
+				<name>
+					<graphics>
+						<offset x="-70" y="0"/>
+					</graphics>
+					<text>DB_getHumidityThreshold</text>
+				</name>
+				<graphics>
+					<position x="1170" y="930"/>
+				</graphics>
+			</place>
+			<place id="DB_getHumidityThreshold_e">
+				<name>
+					<graphics>
+						<offset x="-70" y="0"/>
+					</graphics>
+					<text>DB_getHumidityThreshold_e</text>
+				</name>
+				<graphics>
+					<position x="1130" y="890"/>
+				</graphics>
+			</place>
+			<place id="DB_RetrieveHumidityThreshold_a">
+				<name>
+					<graphics>
+						<offset x="-80" y="0"/>
+					</graphics>
+					<text>DB_RetrieveHumidityThreshold_a</text>
+				</name>
+				<graphics>
+					<position x="1170" y="990"/>
+				</graphics>
+			</place>
+			<place id="DB_RetrieveEnvironmentThresholds">
+				<name>
+					<graphics>
+						<offset x="85" y="0"/>
+					</graphics>
+					<text>DB_RetrieveEnvironmentThresholds</text>
+				</name>
+				<graphics>
+					<position x="1430" y="1050"/>
+				</graphics>
+			</place>
+			<place id="DB_getEnvironmentThresholds">
+				<name>
+					<graphics>
+						<offset x="75" y="0"/>
+					</graphics>
+					<text>DB_getEnvironmentThresholds</text>
+				</name>
+				<graphics>
+					<position x="1430" y="930"/>
+				</graphics>
+			</place>
+			<place id="DB_getEnvironmentThresholds_e">
+				<name>
+					<graphics>
+						<offset x="80" y="0"/>
+					</graphics>
+					<text>DB_getEnvironmentThresholds_e</text>
+				</name>
+				<graphics>
+					<position x="1470" y="890"/>
+				</graphics>
+			</place>
+			<place id="DB_RetrieveEnvironmentThresholds_a">
+				<name>
+					<graphics>
+						<offset x="90" y="0"/>
+					</graphics>
+					<text>DB_RetrieveEnvironmentThresholds_a</text>
+				</name>
+				<graphics>
+					<position x="1430" y="990"/>
+				</graphics>
+			</place>
+			<place id="AC_StandBy">
+				<name>
+					<graphics>
+						<offset x="40" y="0"/>
+					</graphics>
+					<text>AC_StandBy</text>
+				</name>
+				<graphics>
+					<position x="940" y="510"/>
+				</graphics>
+				<initialMarking>
+					<text>1</text>
+				</initialMarking>
+			</place>
+			<place id="AC_DecreaseTemperature">
+				<name>
+					<graphics>
+						<offset x="65" y="0"/>
+					</graphics>
+					<text>AC_DecreaseTemperature</text>
+				</name>
+				<graphics>
+					<position x="960" y="700"/>
+				</graphics>
+			</place>
+			<place id="AC_decreaseTemperature">
+				<name>
+					<graphics>
+						<offset x="65" y="0"/>
+					</graphics>
+					<text>AC_decreaseTemperature</text>
+				</name>
+				<graphics>
+					<position x="960" y="580"/>
+				</graphics>
+			</place>
+			<place id="AC_decreaseTemperature_e">
+				<name>
+					<graphics>
+						<offset x="65" y="0"/>
+					</graphics>
+					<text>AC_decreaseTemperature_e</text>
+				</name>
+				<graphics>
+					<position x="1000" y="540"/>
+				</graphics>
+			</place>
+			<place id="AC_DecreaseTemperature_a">
+				<name>
+					<graphics>
+						<offset x="70" y="0"/>
+					</graphics>
+					<text>AC_DecreaseTemperature_a</text>
+				</name>
+				<graphics>
+					<position x="960" y="640"/>
+				</graphics>
+			</place>
+			<place id="AC_RaiseTemperature">
+				<name>
+					<graphics>
+						<offset x="-60" y="0"/>
+					</graphics>
+					<text>AC_RaiseTemperature</text>
+				</name>
+				<graphics>
+					<position x="920" y="700"/>
+				</graphics>
+			</place>
+			<place id="AC_raiseTemperature">
+				<name>
+					<graphics>
+						<offset x="-55" y="0"/>
+					</graphics>
+					<text>AC_raiseTemperature</text>
+				</name>
+				<graphics>
+					<position x="920" y="580"/>
+				</graphics>
+			</place>
+			<place id="AC_raiseTemperature_e">
+				<name>
+					<graphics>
+						<offset x="-60" y="0"/>
+					</graphics>
+					<text>AC_raiseTemperature_e</text>
+				</name>
+				<graphics>
+					<position x="880" y="540"/>
+				</graphics>
+			</place>
+			<place id="AC_RaiseTemperature_a">
+				<name>
+					<graphics>
+						<offset x="-65" y="0"/>
+					</graphics>
+					<text>AC_RaiseTemperature_a</text>
+				</name>
+				<graphics>
+					<position x="920" y="640"/>
+				</graphics>
+			</place>
+			<place id="trig_getTemperatureData">
+				<name>
+					<graphics>
+						<offset x="65" y="0"/>
+					</graphics>
+					<text>trig_getTemperatureData</text>
+				</name>
+				<graphics>
+					<position x="710" y="10"/>
+				</graphics>
+			</place>
+			<place id="trig_getTemperatureThreshold">
+				<name>
+					<graphics>
+						<offset x="75" y="0"/>
+					</graphics>
+					<text>trig_getTemperatureThreshold</text>
+				</name>
+				<graphics>
+					<position x="880" y="800"/>
+				</graphics>
+			</place>
+			<place id="reply_getTemperatureThreshold">
+				<name>
+					<graphics>
+						<offset x="0" y="15"/>
+					</graphics>
+					<text>reply_getTemperatureThreshold</text>
+				</name>
+				<graphics>
+					<position x="1180" y="760"/>
+				</graphics>
+			</place>
+			<place id="trig_raiseTemperature">
+				<name>
+					<graphics>
+						<offset x="55" y="0"/>
+					</graphics>
+					<text>trig_raiseTemperature</text>
+				</name>
+				<graphics>
+					<position x="850" y="450"/>
+				</graphics>
+			</place>
+			<place id="trig_decreaseTemperature">
+				<name>
+					<graphics>
+						<offset x="65" y="0"/>
+					</graphics>
+					<text>trig_decreaseTemperature</text>
+				</name>
+				<graphics>
+					<position x="1030" y="450"/>
+				</graphics>
+			</place>
+			<place id="ManagingTemperature">
+				<name>
+					<graphics>
+						<offset x="60" y="0"/>
+					</graphics>
+					<text>ManagingTemperature</text>
+				</name>
+				<graphics>
+					<position x="1110" y="60"/>
+				</graphics>
+				<initialMarking>
+					<text>1</text>
+				</initialMarking>
+			</place>
+			<place id="DSB_StandBy">
+				<name>
+					<graphics>
+						<offset x="45" y="0"/>
+					</graphics>
+					<text>DSB_StandBy</text>
+				</name>
+				<graphics>
+					<position x="390" y="50"/>
+				</graphics>
+				<initialMarking>
+					<text>1</text>
+				</initialMarking>
+			</place>
+			<place id="DSB_input_e">
+				<name>
+					<graphics>
+						<offset x="-40" y="0"/>
+					</graphics>
+					<text>DSB_input_e</text>
+				</name>
+				<graphics>
+					<position x="350" y="80"/>
+				</graphics>
+			</place>
+			<place id="DSB_input">
+				<name>
+					<graphics>
+						<offset x="40" y="0"/>
+					</graphics>
+					<text>DSB_input</text>
+				</name>
+				<graphics>
+					<position x="390" y="110"/>
+				</graphics>
+			</place>
+			<place id="BKP_noerrors_e">
+				<name>
+					<graphics>
+						<offset x="-50" y="0"/>
+					</graphics>
+					<text>BKP_noerrors_e</text>
+				</name>
+				<graphics>
+					<position x="490" y="560"/>
+				</graphics>
+			</place>
+			<place id="BKP_noerrors">
+				<name>
+					<graphics>
+						<offset x="-45" y="0"/>
+					</graphics>
+					<text>BKP_noerrors</text>
+				</name>
+				<graphics>
+					<position x="530" y="600"/>
+				</graphics>
+			</place>
+			<place id="BKP_errors">
+				<name>
+					<graphics>
+						<offset x="40" y="0"/>
+					</graphics>
+					<text>BKP_errors</text>
+				</name>
+				<graphics>
+					<position x="590" y="600"/>
+				</graphics>
+			</place>
+			<place id="BKP_DiscardOutput">
+				<name>
+					<graphics>
+						<offset x="-55" y="0"/>
+					</graphics>
+					<text>BKP_DiscardOutput</text>
+				</name>
+				<graphics>
+					<position x="530" y="660"/>
+				</graphics>
+			</place>
+			<place id="BKP_SendOutput">
+				<name>
+					<graphics>
+						<offset x="50" y="0"/>
+					</graphics>
+					<text>BKP_SendOutput</text>
+				</name>
+				<graphics>
+					<position x="590" y="660"/>
+				</graphics>
+			</place>
+			<place id="DSB_SendInput">
+				<name>
+					<graphics>
+						<offset x="50" y="0"/>
+					</graphics>
+					<text>DSB_SendInput</text>
+				</name>
+				<graphics>
+					<position x="390" y="170"/>
+				</graphics>
+			</place>
+			<place id="SendInput_PMR">
+				<name>
+					<graphics>
+						<offset x="-45" y="0"/>
+					</graphics>
+					<text>SendInput_PMR</text>
+				</name>
+				<graphics>
+					<position x="190" y="200"/>
+				</graphics>
+			</place>
+			<place id="SendOutput_BKP">
+				<name>
+					<graphics>
+						<offset x="50" y="0"/>
+					</graphics>
+					<text>SendOutput_BKP</text>
+				</name>
+				<graphics>
+					<position x="510" y="200"/>
+				</graphics>
+			</place>
+			<place id="NoErrors">
+				<name>
+					<graphics>
+						<offset x="-30" y="0"/>
+					</graphics>
+					<text>NoErrors</text>
+				</name>
+				<graphics>
+					<position x="200" y="510"/>
+				</graphics>
+			</place>
+			<place id="TS1_StandBy">
+				<name>
+					<graphics>
+						<offset x="40" y="0"/>
+					</graphics>
+					<text>TS1_StandBy</text>
+				</name>
+				<graphics>
+					<position x="560" y="270"/>
+				</graphics>
+				<initialMarking>
+					<text>1</text>
+				</initialMarking>
+			</place>
+			<place id="TS1_RetrieveTemperatureData">
+				<name>
+					<graphics>
+						<offset x="75" y="0"/>
+					</graphics>
+					<text>TS1_RetrieveTemperatureData</text>
+				</name>
+				<graphics>
+					<position x="560" y="450"/>
+				</graphics>
+			</place>
+			<place id="TS1_getTemperatureData">
+				<name>
+					<graphics>
+						<offset x="65" y="0"/>
+					</graphics>
+					<text>TS1_getTemperatureData</text>
+				</name>
+				<graphics>
+					<position x="560" y="330"/>
+				</graphics>
+			</place>
+			<place id="TS1_getTemperatureData_e">
+				<name>
+					<graphics>
+						<offset x="-70" y="0"/>
+					</graphics>
+					<text>TS1_getTemperatureData_e</text>
+				</name>
+				<graphics>
+					<position x="520" y="300"/>
+				</graphics>
+			</place>
+			<place id="TS1_RetrieveTemperatureData_a">
+				<name>
+					<graphics>
+						<offset x="80" y="0"/>
+					</graphics>
+					<text>TS1_RetrieveTemperatureData_a</text>
+				</name>
+				<graphics>
+					<position x="560" y="390"/>
+				</graphics>
+			</place>
+			<place id="TS1_DiscardOrSend">
+				<name>
+					<graphics>
+						<offset x="55" y="0"/>
+					</graphics>
+					<text>TS1_DiscardOrSend</text>
+				</name>
+				<graphics>
+					<position x="560" y="510"/>
+				</graphics>
+			</place>
+			<place id="TS_errors">
+				<name>
+					<graphics>
+						<offset x="-30" y="0"/>
+					</graphics>
+					<text>TS_errors</text>
+				</name>
+				<graphics>
+					<position x="160" y="370"/>
+				</graphics>
+			</place>
+			<place id="copy_DSB_StandBy">
+				<name>
+					<graphics>
+						<offset x="45" y="0"/>
+					</graphics>
+					<text>copy_DSB_StandBy</text>
+				</name>
+				<graphics>
+					<position x="320" y="770"/>
+				</graphics>
+				<initialMarking>
+					<text>1</text>
+				</initialMarking>
+			</place>
+			<place id="copy_DSB_input_e">
+				<name>
+					<graphics>
+						<offset x="-40" y="0"/>
+					</graphics>
+					<text>copy_DSB_input_e</text>
+				</name>
+				<graphics>
+					<position x="280" y="800"/>
+				</graphics>
+			</place>
+			<place id="copy_DSB_input">
+				<name>
+					<graphics>
+						<offset x="40" y="0"/>
+					</graphics>
+					<text>copy_DSB_input</text>
+				</name>
+				<graphics>
+					<position x="320" y="830"/>
+				</graphics>
+			</place>
+			<place id="copy_DSB_SendInput">
+				<name>
+					<graphics>
+						<offset x="50" y="0"/>
+					</graphics>
+					<text>copy_DSB_SendInput</text>
+				</name>
+				<graphics>
+					<position x="320" y="890"/>
+				</graphics>
+			</place>
+			<place id="copy_SendInput_PMR">
+				<name>
+					<graphics>
+						<offset x="-45" y="0"/>
+					</graphics>
+					<text>copy_SendInput_PMR</text>
+				</name>
+				<graphics>
+					<position x="120" y="920"/>
+				</graphics>
+			</place>
+			<place id="copy_SendOutput_BKP">
+				<name>
+					<graphics>
+						<offset x="50" y="0"/>
+					</graphics>
+					<text>copy_SendOutput_BKP</text>
+				</name>
+				<graphics>
+					<position x="440" y="920"/>
+				</graphics>
+			</place>
+			<place id="copy_DB_StandBy">
+				<name>
+					<graphics>
+						<offset x="25" y="-15"/>
+					</graphics>
+					<text>copy_DB_StandBy</text>
+				</name>
+				<graphics>
+					<position x="1970" y="950"/>
+				</graphics>
+				<initialMarking>
+					<text>1</text>
+				</initialMarking>
+			</place>
+			<place id="copy_DB_RetrieveTemperatureThreshold">
+				<name>
+					<graphics>
+						<offset x="-85" y="0"/>
+					</graphics>
+					<text>copy_DB_RetrieveTemperatureThreshold</text>
+				</name>
+				<graphics>
+					<position x="1900" y="1140"/>
+				</graphics>
+			</place>
+			<place id="copy_DB_getTemperatureThreshold">
+				<name>
+					<graphics>
+						<offset x="-75" y="0"/>
+					</graphics>
+					<text>copy_DB_getTemperatureThreshold</text>
+				</name>
+				<graphics>
+					<position x="1900" y="1020"/>
+				</graphics>
+			</place>
+			<place id="copy_DB_getTemperatureThreshold_e">
+				<name>
+					<graphics>
+						<offset x="-80" y="0"/>
+					</graphics>
+					<text>copy_DB_getTemperatureThreshold_e</text>
+				</name>
+				<graphics>
+					<position x="1860" y="980"/>
+				</graphics>
+			</place>
+			<place id="copy_DB_RetrieveTemperatureThreshold_a">
+				<name>
+					<graphics>
+						<offset x="-90" y="0"/>
+					</graphics>
+					<text>copy_DB_RetrieveTemperatureThreshold_a</text>
+				</name>
+				<graphics>
+					<position x="1900" y="1080"/>
+				</graphics>
+			</place>
+			<place id="copy_trig_getTemperatureThreshold">
+				<name>
+					<graphics>
+						<offset x="75" y="0"/>
+					</graphics>
+					<text>copy_trig_getTemperatureThreshold</text>
+				</name>
+				<graphics>
+					<position x="1820" y="890"/>
+				</graphics>
+			</place>
+			<place id="CMR_StandBy">
+				<name>
+					<graphics>
+						<offset x="45" y="0"/>
+					</graphics>
+					<text>CMR_StandBy</text>
+				</name>
+				<graphics>
+					<position x="320" y="1200"/>
+				</graphics>
+				<initialMarking>
+					<text>1</text>
+				</initialMarking>
+			</place>
+			<place id="CMR_outputreceived_e">
+				<name>
+					<graphics>
+						<offset x="-60" y="0"/>
+					</graphics>
+					<text>CMR_outputreceived_e</text>
+				</name>
+				<graphics>
+					<position x="280" y="1230"/>
+				</graphics>
+			</place>
+			<place id="CMR_outputreceived">
+				<name>
+					<graphics>
+						<offset x="60" y="0"/>
+					</graphics>
+					<text>CMR_outputreceived</text>
+				</name>
+				<graphics>
+					<position x="320" y="1260"/>
+				</graphics>
+			</place>
+			<place id="CMR_Compare">
+				<name>
+					<graphics>
+						<offset x="45" y="0"/>
+					</graphics>
+					<text>CMR_Compare</text>
+				</name>
+				<graphics>
+					<position x="320" y="1320"/>
+				</graphics>
+			</place>
+			<place id="CMR_atleastone">
+				<name>
+					<graphics>
+						<offset x="-50" y="0"/>
+					</graphics>
+					<text>CMR_atleastone</text>
+				</name>
+				<graphics>
+					<position x="280" y="1350"/>
+				</graphics>
+				<initialMarking>
+					<text>1</text>
+				</initialMarking>
+			</place>
+			<!-- List of transitions -->
+			<transition id="GC_t2_StandBy">
+				<name>
+					<graphics>
+						<offset x="30" y="-15"/>
+					</graphics>
+					<text>GC_t2_StandBy</text>
+				</name>
+				<graphics>
+					<position x="1738" y="160"/>
+				</graphics>
+			</transition>
+			<transition id="GC_t_RetrieveSoilHumidityThreshold">
+				<name>
+					<graphics>
+						<offset x="85" y="0"/>
+					</graphics>
+					<text>GC_t_RetrieveSoilHumidityThreshold</text>
+				</name>
+				<graphics>
+					<position x="1738" y="350"/>
+				</graphics>
+			</transition>
+			<transition id="GC_t_triggerEnvironmentCheck">
+				<name>
+					<graphics>
+						<offset x="75" y="0"/>
+					</graphics>
+					<text>GC_t_triggerEnvironmentCheck</text>
+				</name>
+				<graphics>
+					<position x="1738" y="230"/>
+				</graphics>
+			</transition>
+			<transition id="GC_t_triggerEnvironmentCheck_loss">
+				<name>
+					<graphics>
+						<offset x="85" y="0"/>
+					</graphics>
+					<text>GC_t_triggerEnvironmentCheck_loss</text>
+				</name>
+				<graphics>
+					<position x="1778" y="190"/>
+				</graphics>
+			</transition>
+			<transition id="GC_t_BeginEnvironmentCheck">
+				<name>
+					<graphics>
+						<offset x="75" y="0"/>
+					</graphics>
+					<text>GC_t_BeginEnvironmentCheck</text>
+				</name>
+				<graphics>
+					<position x="1738" y="290"/>
+				</graphics>
+			</transition>
+			<transition id="GC_t1_StandBy">
+				<name>
+					<graphics>
+						<offset x="-25" y="-15"/>
+					</graphics>
+					<text>GC_t1_StandBy</text>
+				</name>
+				<graphics>
+					<position x="1378" y="160"/>
+				</graphics>
+			</transition>
+			<transition id="GC_t_triggerTemperatureCheck">
+				<name>
+					<graphics>
+						<offset x="-75" y="0"/>
+					</graphics>
+					<text>GC_t_triggerTemperatureCheck</text>
+				</name>
+				<graphics>
+					<position x="1378" y="230"/>
+				</graphics>
+			</transition>
+			<transition id="GC_t_BeginTemperatureCheck">
+				<name>
+					<graphics>
+						<offset x="-70" y="-15"/>
+					</graphics>
+					<text>GC_t_BeginTemperatureCheck</text>
+				</name>
+				<graphics>
+					<position x="1378" y="290"/>
+				</graphics>
+			</transition>
+			<transition id="GC_t3_StandBy">
+				<name>
+					<graphics>
+						<offset x="30" y="-15"/>
+					</graphics>
+					<text>GC_t3_StandBy</text>
+				</name>
+				<graphics>
+					<position x="1958" y="160"/>
+				</graphics>
+			</transition>
+			<transition id="GC_t_monitorHumidity">
+				<name>
+					<graphics>
+						<offset x="60" y="0"/>
+					</graphics>
+					<text>GC_t_monitorHumidity</text>
+				</name>
+				<graphics>
+					<position x="1958" y="230"/>
+				</graphics>
+			</transition>
+			<transition id="GC_t_monitorHumidity_loss">
+				<name>
+					<graphics>
+						<offset x="70" y="0"/>
+					</graphics>
+					<text>GC_t_monitorHumidity_loss</text>
+				</name>
+				<graphics>
+					<position x="1998" y="190"/>
+				</graphics>
+			</transition>
+			<transition id="GC_t_BeginHumidityMonitoring">
+				<name>
+					<graphics>
+						<offset x="75" y="-15"/>
+					</graphics>
+					<text>GC_t_BeginHumidityMonitoring</text>
+				</name>
+				<graphics>
+					<position x="1958" y="290"/>
+				</graphics>
+			</transition>
+			<transition id="GC_t_getTemperatureData">
+				<name>
+					<graphics>
+						<offset x="-65" y="0"/>
+					</graphics>
+					<text>GC_t_getTemperatureData</text>
+				</name>
+				<graphics>
+					<position x="1378" y="360"/>
+				</graphics>
+			</transition>
+			<transition id="GC_t_CheckTemperature">
+				<name>
+					<graphics>
+						<offset x="-60" y="-15"/>
+					</graphics>
+					<text>GC_t_CheckTemperature</text>
+				</name>
+				<graphics>
+					<position x="1378" y="420"/>
+				</graphics>
+			</transition>
+			<transition id="GC_t_getTemperatureThreshold">
+				<name>
+					<graphics>
+						<offset x="-80" y="0"/>
+					</graphics>
+					<text>GC_t_getTemperatureThreshold</text>
+				</name>
+				<graphics>
+					<position x="1378" y="490"/>
+				</graphics>
+			</transition>
+			<transition id="GC_t1_CheckTemperatureThreshold_a">
+				<name>
+					<graphics>
+						<offset x="-90" y="0"/>
+					</graphics>
+					<text>GC_t1_CheckTemperatureThreshold_a</text>
+				</name>
+				<graphics>
+					<position x="1358" y="550"/>
+				</graphics>
+			</transition>
+			<transition id="GC_t2_CheckTemperatureThreshold_a">
+				<name>
+					<graphics>
+						<offset x="85" y="0"/>
+					</graphics>
+					<text>GC_t2_CheckTemperatureThreshold_a</text>
+				</name>
+				<graphics>
+					<position x="1398" y="550"/>
+				</graphics>
+			</transition>
+			<transition id="GC_t_raiseTemperature">
+				<name>
+					<graphics>
+						<offset x="-65" y="0"/>
+					</graphics>
+					<text>GC_t_raiseTemperature</text>
+				</name>
+				<graphics>
+					<position x="1358" y="610"/>
+				</graphics>
+			</transition>
+			<transition id="GC_t_decreaseTemperature">
+				<name>
+					<graphics>
+						<offset x="70" y="0"/>
+					</graphics>
+					<text>GC_t_decreaseTemperature</text>
+				</name>
+				<graphics>
+					<position x="1398" y="610"/>
+				</graphics>
+			</transition>
+			<transition id="GC_t_getTemperatureData2">
+				<name>
+					<graphics>
+						<offset x="65" y="0"/>
+					</graphics>
+					<text>GC_t_getTemperatureData2</text>
+				</name>
+				<graphics>
+					<position x="1738" y="410"/>
+				</graphics>
+			</transition>
+			<transition id="GC_t_getTemperatureData_loss2">
+				<name>
+					<graphics>
+						<offset x="-75" y="0"/>
+					</graphics>
+					<text>GC_t_getTemperatureData_loss2</text>
+				</name>
+				<graphics>
+					<position x="1698" y="380"/>
+				</graphics>
+			</transition>
+			<transition id="GC_t_EnvCheckTemperature">
+				<name>
+					<graphics>
+						<offset x="70" y="0"/>
+					</graphics>
+					<text>GC_t_EnvCheckTemperature</text>
+				</name>
+				<graphics>
+					<position x="1738" y="470"/>
+				</graphics>
+			</transition>
+			<transition id="GC_t_getHumidityData2">
+				<name>
+					<graphics>
+						<offset x="60" y="0"/>
+					</graphics>
+					<text>GC_t_getHumidityData2</text>
+				</name>
+				<graphics>
+					<position x="1738" y="530"/>
+				</graphics>
+			</transition>
+			<transition id="GC_t_getHumidityData_loss2">
+				<name>
+					<graphics>
+						<offset x="-70" y="0"/>
+					</graphics>
+					<text>GC_t_getHumidityData_loss2</text>
+				</name>
+				<graphics>
+					<position x="1698" y="500"/>
+				</graphics>
+			</transition>
+			<transition id="GC_t_EnvCheckHumidity">
+				<name>
+					<graphics>
+						<offset x="65" y="0"/>
+					</graphics>
+					<text>GC_t_EnvCheckHumidity</text>
+				</name>
+				<graphics>
+					<position x="1738" y="590"/>
+				</graphics>
+			</transition>
+			<transition id="GC_t_getSoilHumidityData2">
+				<name>
+					<graphics>
+						<offset x="70" y="0"/>
+					</graphics>
+					<text>GC_t_getSoilHumidityData2</text>
+				</name>
+				<graphics>
+					<position x="1738" y="650"/>
+				</graphics>
+			</transition>
+			<transition id="GC_t_getSoilHumidityData_loss2">
+				<name>
+					<graphics>
+						<offset x="-75" y="0"/>
+					</graphics>
+					<text>GC_t_getSoilHumidityData_loss2</text>
+				</name>
+				<graphics>
+					<position x="1698" y="620"/>
+				</graphics>
+			</transition>
+			<transition id="GC_t_EnvCheckSoilHumidity">
+				<name>
+					<graphics>
+						<offset x="75" y="0"/>
+					</graphics>
+					<text>GC_t_EnvCheckSoilHumidity</text>
+				</name>
+				<graphics>
+					<position x="1738" y="710"/>
+				</graphics>
+			</transition>
+			<transition id="GC_t_getEnvironmentThresholds">
+				<name>
+					<graphics>
+						<offset x="80" y="0"/>
+					</graphics>
+					<text>GC_t_getEnvironmentThresholds</text>
+				</name>
+				<graphics>
+					<position x="1738" y="770"/>
+				</graphics>
+			</transition>
+			<transition id="GC_t_getEnvironmentThresholds_loss">
+				<name>
+					<graphics>
+						<offset x="-85" y="0"/>
+					</graphics>
+					<text>GC_t_getEnvironmentThresholds_loss</text>
+				</name>
+				<graphics>
+					<position x="1698" y="740"/>
+				</graphics>
+			</transition>
+			<transition id="GC_t_CheckEnvironmentThresholds">
+				<name>
+					<graphics>
+						<offset x="85" y="0"/>
+					</graphics>
+					<text>GC_t_CheckEnvironmentThresholds</text>
+				</name>
+				<graphics>
+					<position x="1738" y="830"/>
+				</graphics>
+			</transition>
+			<transition id="GC_t_getHumidityData_loss">
+				<name>
+					<graphics>
+						<offset x="70" y="0"/>
+					</graphics>
+					<text>GC_t_getHumidityData_loss</text>
+				</name>
+				<graphics>
+					<position x="1998" y="320"/>
+				</graphics>
+			</transition>
+			<transition id="GC_t_getHumidityData">
+				<name>
+					<graphics>
+						<offset x="60" y="0"/>
+					</graphics>
+					<text>GC_t_getHumidityData</text>
+				</name>
+				<graphics>
+					<position x="1958" y="360"/>
+				</graphics>
+			</transition>
+			<transition id="GC_t_CheckHumidity">
+				<name>
+					<graphics>
+						<offset x="50" y="-15"/>
+					</graphics>
+					<text>GC_t_CheckHumidity</text>
+				</name>
+				<graphics>
+					<position x="1958" y="420"/>
+				</graphics>
+			</transition>
+			<transition id="GC_t_getHumidityThreshold_loss">
+				<name>
+					<graphics>
+						<offset x="80" y="0"/>
+					</graphics>
+					<text>GC_t_getHumidityThreshold_loss</text>
+				</name>
+				<graphics>
+					<position x="1998" y="450"/>
+				</graphics>
+			</transition>
+			<transition id="GC_t_getHumidityThreshold">
+				<name>
+					<graphics>
+						<offset x="70" y="0"/>
+					</graphics>
+					<text>GC_t_getHumidityThreshold</text>
+				</name>
+				<graphics>
+					<position x="1958" y="490"/>
+				</graphics>
+			</transition>
+			<transition id="GC_t_CheckHumidityThreshold">
+				<name>
+					<graphics>
+						<offset x="70" y="-15"/>
+					</graphics>
+					<text>GC_t_CheckHumidityThreshold</text>
+				</name>
+				<graphics>
+					<position x="1958" y="550"/>
+				</graphics>
+			</transition>
+			<transition id="GC_t_notify_loss">
+				<name>
+					<graphics>
+						<offset x="50" y="0"/>
+					</graphics>
+					<text>GC_t_notify_loss</text>
+				</name>
+				<graphics>
+					<position x="1998" y="580"/>
+				</graphics>
+			</transition>
+			<transition id="GC_t_notify">
+				<name>
+					<graphics>
+						<offset x="40" y="0"/>
+					</graphics>
+					<text>GC_t_notify</text>
+				</name>
+				<graphics>
+					<position x="1958" y="620"/>
+				</graphics>
+			</transition>
+			<transition id="GC_t_NotifyMobileApp">
+				<name>
+					<graphics>
+						<offset x="60" y="0"/>
+					</graphics>
+					<text>GC_t_NotifyMobileApp</text>
+				</name>
+				<graphics>
+					<position x="1958" y="680"/>
+				</graphics>
+			</transition>
+			<transition id="TS_t_StandBy">
+				<name>
+					<graphics>
+						<offset x="45" y="0"/>
+					</graphics>
+					<text>TS_t_StandBy</text>
+				</name>
+				<graphics>
+					<position x="208" y="300"/>
+				</graphics>
+			</transition>
+			<transition id="TS_t_RetrieveTemperatureData">
+				<name>
+					<graphics>
+						<offset x="75" y="0"/>
+					</graphics>
+					<text>TS_t_RetrieveTemperatureData</text>
+				</name>
+				<graphics>
+					<position x="208" y="480"/>
+				</graphics>
+			</transition>
+			<transition id="TS_t_getTemperatureData">
+				<name>
+					<graphics>
+						<offset x="65" y="0"/>
+					</graphics>
+					<text>TS_t_getTemperatureData</text>
+				</name>
+				<graphics>
+					<position x="208" y="360"/>
+				</graphics>
+			</transition>
+			<transition id="TS_t_getTemperatureData_loss">
+				<name>
+					<graphics>
+						<offset x="-75" y="0"/>
+					</graphics>
+					<text>TS_t_getTemperatureData_loss</text>
+				</name>
+				<graphics>
+					<position x="168" y="330"/>
+				</graphics>
+			</transition>
+			<transition id="TS_t_RetrieveTemperatureData_a">
+				<name>
+					<graphics>
+						<offset x="80" y="0"/>
+					</graphics>
+					<text>TS_t_RetrieveTemperatureData_a</text>
+				</name>
+				<graphics>
+					<position x="205" y="420"/>
+				</graphics>
+			</transition>
+			<transition id="DB_t3_StandBy">
+				<name>
+					<graphics>
+						<offset x="30" y="-15"/>
+					</graphics>
+					<text>DB_t3_StandBy</text>
+				</name>
+				<graphics>
+					<position x="1218" y="890"/>
+				</graphics>
+			</transition>
+			<transition id="DB_t_RetrieveSoilHumidityThreshold">
+				<name>
+					<graphics>
+						<offset x="85" y="0"/>
+					</graphics>
+					<text>DB_t_RetrieveSoilHumidityThreshold</text>
+				</name>
+				<graphics>
+					<position x="1218" y="1080"/>
+				</graphics>
+			</transition>
+			<transition id="DB_t_getSoilHumidityThreshold">
+				<name>
+					<graphics>
+						<offset x="75" y="0"/>
+					</graphics>
+					<text>DB_t_getSoilHumidityThreshold</text>
+				</name>
+				<graphics>
+					<position x="1218" y="960"/>
+				</graphics>
+			</transition>
+			<transition id="DB_t_getSoilHumidityThreshold_loss">
+				<name>
+					<graphics>
+						<offset x="85" y="0"/>
+					</graphics>
+					<text>DB_t_getSoilHumidityThreshold_loss</text>
+				</name>
+				<graphics>
+					<position x="1258" y="920"/>
+				</graphics>
+			</transition>
+			<transition id="DB_t_RetrieveSoilHumidityThreshold_a">
+				<name>
+					<graphics>
+						<offset x="90" y="0"/>
+					</graphics>
+					<text>DB_t_RetrieveSoilHumidityThreshold_a</text>
+				</name>
+				<graphics>
+					<position x="1215" y="1020"/>
+				</graphics>
+			</transition>
+			<transition id="DB_t1_StandBy">
+				<name>
+					<graphics>
+						<offset x="-25" y="-15"/>
+					</graphics>
+					<text>DB_t1_StandBy</text>
+				</name>
+				<graphics>
+					<position x="968" y="890"/>
+				</graphics>
+			</transition>
+			<transition id="DB_t_tRetrieveTemperatureThreshold">
+				<name>
+					<graphics>
+						<offset x="-90" y="0"/>
+					</graphics>
+					<text>DB_t_tRetrieveTemperatureThreshold</text>
+				</name>
+				<graphics>
+					<position x="968" y="1080"/>
+				</graphics>
+			</transition>
+			<transition id="DB_t_getTemperatureThreshold">
+				<name>
+					<graphics>
+						<offset x="-80" y="0"/>
+					</graphics>
+					<text>DB_t_getTemperatureThreshold</text>
+				</name>
+				<graphics>
+					<position x="968" y="960"/>
+				</graphics>
+			</transition>
+			<transition id="DB_t_getTemperatureThreshold_loss">
+				<name>
+					<graphics>
+						<offset x="-85" y="0"/>
+					</graphics>
+					<text>DB_t_getTemperatureThreshold_loss</text>
+				</name>
+				<graphics>
+					<position x="928" y="920"/>
+				</graphics>
+			</transition>
+			<transition id="DB_t_RetrieveTemperatureThreshold_a">
+				<name>
+					<graphics>
+						<offset x="-95" y="0"/>
+					</graphics>
+					<text>DB_t_RetrieveTemperatureThreshold_a</text>
+				</name>
+				<graphics>
+					<position x="965" y="1020"/>
+				</graphics>
+			</transition>
+			<transition id="DB_t2_StandBy">
+				<name>
+					<graphics>
+						<offset x="-25" y="-15"/>
+					</graphics>
+					<text>DB_t2_StandBy</text>
+				</name>
+				<graphics>
+					<position x="1178" y="890"/>
+				</graphics>
+			</transition>
+			<transition id="DB_t_RetrieveHumidityThreshold">
+				<name>
+					<graphics>
+						<offset x="-85" y="0"/>
+					</graphics>
+					<text>DB_t_RetrieveHumidityThreshold</text>
+				</name>
+				<graphics>
+					<position x="1178" y="1080"/>
+				</graphics>
+			</transition>
+			<transition id="DB_t_getHumidityThreshold">
+				<name>
+					<graphics>
+						<offset x="-70" y="0"/>
+					</graphics>
+					<text>DB_t_getHumidityThreshold</text>
+				</name>
+				<graphics>
+					<position x="1178" y="960"/>
+				</graphics>
+			</transition>
+			<transition id="DB_t_getHumidityThreshold_loss">
+				<name>
+					<graphics>
+						<offset x="-80" y="0"/>
+					</graphics>
+					<text>DB_t_getHumidityThreshold_loss</text>
+				</name>
+				<graphics>
+					<position x="1138" y="920"/>
+				</graphics>
+			</transition>
+			<transition id="DB_t_RetrieveHumidityThreshold_a">
+				<name>
+					<graphics>
+						<offset x="-85" y="0"/>
+					</graphics>
+					<text>DB_t_RetrieveHumidityThreshold_a</text>
+				</name>
+				<graphics>
+					<position x="1175" y="1020"/>
+				</graphics>
+			</transition>
+			<transition id="DB_t4_StandBy">
+				<name>
+					<graphics>
+						<offset x="30" y="-15"/>
+					</graphics>
+					<text>DB_t4_StandBy</text>
+				</name>
+				<graphics>
+					<position x="1438" y="890"/>
+				</graphics>
+			</transition>
+			<transition id="DB_t_RetrieveEnvironmentThresholds">
+				<name>
+					<graphics>
+						<offset x="90" y="0"/>
+					</graphics>
+					<text>DB_t_RetrieveEnvironmentThresholds</text>
+				</name>
+				<graphics>
+					<position x="1438" y="1080"/>
+				</graphics>
+			</transition>
+			<transition id="DB_t_getEnvironmentThresholds">
+				<name>
+					<graphics>
+						<offset x="75" y="0"/>
+					</graphics>
+					<text>DB_t_getEnvironmentThresholds</text>
+				</name>
+				<graphics>
+					<position x="1438" y="960"/>
+				</graphics>
+			</transition>
+			<transition id="DB_t_getEnvironmentThresholds_loss">
+				<name>
+					<graphics>
+						<offset x="85" y="0"/>
+					</graphics>
+					<text>DB_t_getEnvironmentThresholds_loss</text>
+				</name>
+				<graphics>
+					<position x="1478" y="920"/>
+				</graphics>
+			</transition>
+			<transition id="DB_t_RetrieveEnvironmentThresholds_a">
+				<name>
+					<graphics>
+						<offset x="95" y="0"/>
+					</graphics>
+					<text>DB_t_RetrieveEnvironmentThresholds_a</text>
+				</name>
+				<graphics>
+					<position x="1435" y="1020"/>
+				</graphics>
+			</transition>
+			<transition id="AC_t2_StandBy">
+				<name>
+					<graphics>
+						<offset x="30" y="-15"/>
+					</graphics>
+					<text>AC_t2_StandBy</text>
+				</name>
+				<graphics>
+					<position x="968" y="540"/>
+				</graphics>
+			</transition>
+			<transition id="AC_t_DecreaseTemperature">
+				<name>
+					<graphics>
+						<offset x="70" y="0"/>
+					</graphics>
+					<text>AC_t_DecreaseTemperature</text>
+				</name>
+				<graphics>
+					<position x="968" y="730"/>
+				</graphics>
+			</transition>
+			<transition id="AC_t_decreaseTemperature">
+				<name>
+					<graphics>
+						<offset x="65" y="0"/>
+					</graphics>
+					<text>AC_t_decreaseTemperature</text>
+				</name>
+				<graphics>
+					<position x="968" y="610"/>
+				</graphics>
+			</transition>
+			<transition id="AC_t_decreaseTemperature_loss">
+				<name>
+					<graphics>
+						<offset x="75" y="0"/>
+					</graphics>
+					<text>AC_t_decreaseTemperature_loss</text>
+				</name>
+				<graphics>
+					<position x="1008" y="570"/>
+				</graphics>
+			</transition>
+			<transition id="AC_t_DecreaseTemperature_a">
+				<name>
+					<graphics>
+						<offset x="75" y="0"/>
+					</graphics>
+					<text>AC_t_DecreaseTemperature_a</text>
+				</name>
+				<graphics>
+					<position x="965" y="670"/>
+				</graphics>
+			</transition>
+			<transition id="AC_t1_StandBy">
+				<name>
+					<graphics>
+						<offset x="-25" y="-15"/>
+					</graphics>
+					<text>AC_t1_StandBy</text>
+				</name>
+				<graphics>
+					<position x="928" y="540"/>
+				</graphics>
+			</transition>
+			<transition id="AC_t_RaiseTemperature">
+				<name>
+					<graphics>
+						<offset x="-60" y="0"/>
+					</graphics>
+					<text>AC_t_RaiseTemperature</text>
+				</name>
+				<graphics>
+					<position x="928" y="730"/>
+				</graphics>
+			</transition>
+			<transition id="AC_t_raiseTemperature">
+				<name>
+					<graphics>
+						<offset x="-60" y="0"/>
+					</graphics>
+					<text>AC_t_raiseTemperature</text>
+				</name>
+				<graphics>
+					<position x="928" y="610"/>
+				</graphics>
+			</transition>
+			<transition id="AC_t_raiseTemperature_loss">
+				<name>
+					<graphics>
+						<offset x="-70" y="0"/>
+					</graphics>
+					<text>AC_t_raiseTemperature_loss</text>
+				</name>
+				<graphics>
+					<position x="888" y="570"/>
+				</graphics>
+			</transition>
+			<transition id="AC_t_RaiseTemperature_a">
+				<name>
+					<graphics>
+						<offset x="-70" y="0"/>
+					</graphics>
+					<text>AC_t_RaiseTemperature_a</text>
+				</name>
+				<graphics>
+					<position x="925" y="670"/>
+				</graphics>
+			</transition>
+			<transition id="trig_t_getTemperatureData">
+				<name>
+					<graphics>
+						<offset x="70" y="0"/>
+					</graphics>
+					<text>trig_t_getTemperatureData</text>
+				</name>
+				<graphics>
+					<position x="718" y="40"/>
+				</graphics>
+			</transition>
+			<transition id="trig_t_getTemperatureThreshold">
+				<name>
+					<graphics>
+						<offset x="75" y="0"/>
+					</graphics>
+					<text>trig_t_getTemperatureThreshold</text>
+				</name>
+				<graphics>
+					<position x="888" y="830"/>
+				</graphics>
+			</transition>
+			<transition id="trig_t_raiseTemperature">
+				<name>
+					<graphics>
+						<offset x="60" y="0"/>
+					</graphics>
+					<text>trig_t_raiseTemperature</text>
+				</name>
+				<graphics>
+					<position x="858" y="480"/>
+				</graphics>
+			</transition>
+			<transition id="trig_t_decreaseTemperature">
+				<name>
+					<graphics>
+						<offset x="70" y="0"/>
+					</graphics>
+					<text>trig_t_decreaseTemperature</text>
+				</name>
+				<graphics>
+					<position x="1038" y="480"/>
+				</graphics>
+			</transition>
+			<transition id="arrival">
+				<name>
+					<graphics>
+						<offset x="30" y="0"/>
+					</graphics>
+					<text>arrival</text>
+				</name>
+				<graphics>
+					<position x="1115" y="90"/>
+				</graphics>
+			</transition>
+			<transition id="DSB_t_StandBy">
+				<name>
+					<graphics>
+						<offset x="50" y="0"/>
+					</graphics>
+					<text>DSB_t_StandBy</text>
+				</name>
+				<graphics>
+					<position x="398" y="80"/>
+				</graphics>
+			</transition>
+			<transition id="DSB_t_input">
+				<name>
+					<graphics>
+						<offset x="45" y="0"/>
+					</graphics>
+					<text>DSB_t_input</text>
+				</name>
+				<graphics>
+					<position x="398" y="140"/>
+				</graphics>
+			</transition>
+			<transition id="BKP_t_noerrors">
+				<name>
+					<graphics>
+						<offset x="-50" y="0"/>
+					</graphics>
+					<text>BKP_t_noerrors</text>
+				</name>
+				<graphics>
+					<position x="538" y="630"/>
+				</graphics>
+			</transition>
+			<transition id="BKP_t_errors">
+				<name>
+					<graphics>
+						<offset x="45" y="0"/>
+					</graphics>
+					<text>BKP_t_errors</text>
+				</name>
+				<graphics>
+					<position x="598" y="630"/>
+				</graphics>
+			</transition>
+			<transition id="BKP_t_DiscardOutput">
+				<name>
+					<graphics>
+						<offset x="-60" y="0"/>
+					</graphics>
+					<text>BKP_t_DiscardOutput</text>
+				</name>
+				<graphics>
+					<position x="538" y="690"/>
+				</graphics>
+			</transition>
+			<transition id="BKP_t_SendOutput">
+				<name>
+					<graphics>
+						<offset x="55" y="0"/>
+					</graphics>
+					<text>BKP_t_SendOutput</text>
+				</name>
+				<graphics>
+					<position x="598" y="690"/>
+				</graphics>
+			</transition>
+			<transition id="DSB_t_SendInput">
+				<name>
+					<graphics>
+						<offset x="50" y="0"/>
+					</graphics>
+					<text>DSB_t_SendInput</text>
+				</name>
+				<graphics>
+					<position x="398" y="200"/>
+				</graphics>
+			</transition>
+			<transition id="t_SendInput_PMR">
+				<name>
+					<graphics>
+						<offset x="-50" y="0"/>
+					</graphics>
+					<text>t_SendInput_PMR</text>
+				</name>
+				<graphics>
+					<position x="198" y="230"/>
+				</graphics>
+			</transition>
+			<transition id="t_SendOutput_BKP">
+				<name>
+					<graphics>
+						<offset x="55" y="0"/>
+					</graphics>
+					<text>t_SendOutput_BKP</text>
+				</name>
+				<graphics>
+					<position x="518" y="230"/>
+				</graphics>
+			</transition>
+			<transition id="t_NoErrors">
+				<name>
+					<graphics>
+						<offset x="-35" y="0"/>
+					</graphics>
+					<text>t_NoErrors</text>
+				</name>
+				<graphics>
+					<position x="208" y="540"/>
+				</graphics>
+			</transition>
+			<transition id="TS1_t_StandBy">
+				<name>
+					<graphics>
+						<offset x="45" y="0"/>
+					</graphics>
+					<text>TS1_t_StandBy</text>
+				</name>
+				<graphics>
+					<position x="568" y="300"/>
+				</graphics>
+			</transition>
+			<transition id="TS1_t2_DiscardOrSend">
+				<name>
+					<graphics>
+						<offset x="65" y="0"/>
+					</graphics>
+					<text>TS1_t2_DiscardOrSend</text>
+				</name>
+				<graphics>
+					<position x="598" y="540"/>
+				</graphics>
+			</transition>
+			<transition id="TS1_t_getTemperatureData">
+				<name>
+					<graphics>
+						<offset x="65" y="0"/>
+					</graphics>
+					<text>TS1_t_getTemperatureData</text>
+				</name>
+				<graphics>
+					<position x="568" y="360"/>
+				</graphics>
+			</transition>
+			<transition id="TS1_t_getTemperatureData_loss">
+				<name>
+					<graphics>
+						<offset x="-75" y="0"/>
+					</graphics>
+					<text>TS1_t_getTemperatureData_loss</text>
+				</name>
+				<graphics>
+					<position x="528" y="330"/>
+				</graphics>
+			</transition>
+			<transition id="TS1_t_RetrieveTemperatureData_a">
+				<name>
+					<graphics>
+						<offset x="80" y="0"/>
+					</graphics>
+					<text>TS1_t_RetrieveTemperatureData_a</text>
+				</name>
+				<graphics>
+					<position x="565" y="420"/>
+				</graphics>
+			</transition>
+			<transition id="TS1_t1_DiscardOrSend">
+				<name>
+					<graphics>
+						<offset x="-65" y="0"/>
+					</graphics>
+					<text>TS1_t1_DiscardOrSend</text>
+				</name>
+				<graphics>
+					<position x="538" y="540"/>
+				</graphics>
+			</transition>
+			<transition id="TS1_t_RetrieveTemperatureData">
+				<name>
+					<graphics>
+						<offset x="75" y="0"/>
+					</graphics>
+					<text>TS1_t_RetrieveTemperatureData</text>
+				</name>
+				<graphics>
+					<position x="568" y="480"/>
+				</graphics>
+			</transition>
+			<transition id="copy_DSB_t_StandBy">
+				<name>
+					<graphics>
+						<offset x="50" y="0"/>
+					</graphics>
+					<text>copy_DSB_t_StandBy</text>
+				</name>
+				<graphics>
+					<position x="328" y="800"/>
+				</graphics>
+			</transition>
+			<transition id="copy_DSB_t_input">
+				<name>
+					<graphics>
+						<offset x="45" y="0"/>
+					</graphics>
+					<text>copy_DSB_t_input</text>
+				</name>
+				<graphics>
+					<position x="328" y="860"/>
+				</graphics>
+			</transition>
+			<transition id="copy_DSB_t_SendInput">
+				<name>
+					<graphics>
+						<offset x="50" y="0"/>
+					</graphics>
+					<text>copy_DSB_t_SendInput</text>
+				</name>
+				<graphics>
+					<position x="328" y="920"/>
+				</graphics>
+			</transition>
+			<transition id="copy_t_SendInput_PMR">
+				<name>
+					<graphics>
+						<offset x="-50" y="0"/>
+					</graphics>
+					<text>copy_t_SendInput_PMR</text>
+				</name>
+				<graphics>
+					<position x="128" y="950"/>
+				</graphics>
+			</transition>
+			<transition id="copy_t_SendOutput_BKP">
+				<name>
+					<graphics>
+						<offset x="55" y="0"/>
+					</graphics>
+					<text>copy_t_SendOutput_BKP</text>
+				</name>
+				<graphics>
+					<position x="448" y="950"/>
+				</graphics>
+			</transition>
+			<transition id="copy_DB_t1_StandBy">
+				<name>
+					<graphics>
+						<offset x="-25" y="-15"/>
+					</graphics>
+					<text>copy_DB_t1_StandBy</text>
+				</name>
+				<graphics>
+					<position x="1908" y="980"/>
+				</graphics>
+			</transition>
+			<transition id="copy_DB_t_tRetrieveTemperatureThreshold">
+				<name>
+					<graphics>
+						<offset x="-90" y="0"/>
+					</graphics>
+					<text>copy_DB_t_tRetrieveTemperatureThreshold</text>
+				</name>
+				<graphics>
+					<position x="1908" y="1170"/>
+				</graphics>
+			</transition>
+			<transition id="copy_DB_t_getTemperatureThreshold">
+				<name>
+					<graphics>
+						<offset x="-80" y="0"/>
+					</graphics>
+					<text>copy_DB_t_getTemperatureThreshold</text>
+				</name>
+				<graphics>
+					<position x="1908" y="1050"/>
+				</graphics>
+			</transition>
+			<transition id="copy_DB_t_getTemperatureThreshold_loss">
+				<name>
+					<graphics>
+						<offset x="-85" y="0"/>
+					</graphics>
+					<text>copy_DB_t_getTemperatureThreshold_loss</text>
+				</name>
+				<graphics>
+					<position x="1868" y="1010"/>
+				</graphics>
+			</transition>
+			<transition id="copy_DB_t_RetrieveTemperatureThreshold_a">
+				<name>
+					<graphics>
+						<offset x="-95" y="0"/>
+					</graphics>
+					<text>copy_DB_t_RetrieveTemperatureThreshold_a</text>
+				</name>
+				<graphics>
+					<position x="1905" y="1110"/>
+				</graphics>
+			</transition>
+			<transition id="copy_trig_t_getTemperatureThreshold">
+				<name>
+					<graphics>
+						<offset x="75" y="0"/>
+					</graphics>
+					<text>copy_trig_t_getTemperatureThreshold</text>
+				</name>
+				<graphics>
+					<position x="1828" y="920"/>
+				</graphics>
+			</transition>
+			<transition id="CMR_t_StandBy">
+				<name>
+					<graphics>
+						<offset x="50" y="0"/>
+					</graphics>
+					<text>CMR_t_StandBy</text>
+				</name>
+				<graphics>
+					<position x="328" y="1230"/>
+				</graphics>
+			</transition>
+			<transition id="CMR_t_outputreceived">
+				<name>
+					<graphics>
+						<offset x="60" y="0"/>
+					</graphics>
+					<text>CMR_t_outputreceived</text>
+				</name>
+				<graphics>
+					<position x="328" y="1290"/>
+				</graphics>
+			</transition>
+			<transition id="CMR_t_Compare">
+				<name>
+					<graphics>
+						<offset x="45" y="0"/>
+					</graphics>
+					<text>CMR_t_Compare</text>
+				</name>
+				<graphics>
+					<position x="328" y="1350"/>
+				</graphics>
+			</transition>
+			<!-- List of arcs -->
+			<arc id="id1" source="GC_StandBy" target="GC_t2_StandBy">
+			</arc>
+			<arc id="id2" source="GC_RetrieveSoilHumidityThreshold" target="GC_t_RetrieveSoilHumidityThreshold">
+			</arc>
+			<arc id="id3" source="GC_triggerEnvironmentCheck" target="GC_t_triggerEnvironmentCheck">
+			</arc>
+			<arc id="id4" source="GC_triggerEnvironmentCheck_e" target="GC_t_triggerEnvironmentCheck_loss">
+			</arc>
+			<arc id="id5" source="GC_t2_StandBy" target="GC_triggerEnvironmentCheck">
+			</arc>
+			<arc id="id6" source="GC_triggerEnvironmentCheck_e" target="GC_t2_StandBy">
+			</arc>
+			<arc id="id7" source="GC_BeginEnvironmentCheck" target="GC_t_BeginEnvironmentCheck">
+			</arc>
+			<arc id="id8" source="GC_t_triggerEnvironmentCheck" target="GC_BeginEnvironmentCheck">
+			</arc>
+			<arc id="id9" source="GC_t_BeginEnvironmentCheck" target="GC_RetrieveSoilHumidityThreshold">
+			</arc>
+			<arc id="id10" source="GC_triggerTemperatureCheck_e" target="GC_t1_StandBy">
+			</arc>
+			<arc id="id11" source="GC_triggerTemperatureCheck" target="GC_t_triggerTemperatureCheck">
+			</arc>
+			<arc id="id12" source="GC_t_triggerTemperatureCheck" target="GC_BeginTemperatureCheck">
+			</arc>
+			<arc id="id13" source="GC_BeginTemperatureCheck" target="GC_t_BeginTemperatureCheck">
+			</arc>
+			<arc id="id14" source="GC_t1_StandBy" target="GC_triggerTemperatureCheck">
+			</arc>
+			<arc id="id15" source="GC_StandBy" target="GC_t1_StandBy">
+			</arc>
+			<arc id="id16" source="GC_monitorHumidity" target="GC_t_monitorHumidity">
+			</arc>
+			<arc id="id17" source="GC_monitorHumidity_e" target="GC_t_monitorHumidity_loss">
+			</arc>
+			<arc id="id18" source="GC_t3_StandBy" target="GC_monitorHumidity">
+			</arc>
+			<arc id="id19" source="GC_monitorHumidity_e" target="GC_t3_StandBy">
+			</arc>
+			<arc id="id20" source="GC_BeginHumidityMonitoring" target="GC_t_BeginHumidityMonitoring">
+			</arc>
+			<arc id="id21" source="GC_t_monitorHumidity" target="GC_BeginHumidityMonitoring">
+			</arc>
+			<arc id="id22" source="GC_StandBy" target="GC_t3_StandBy">
+				<graphics>
+					<position x="1925" y="140"/>
+				</graphics>
+			</arc>
+			<arc id="id23" source="GC_getTemperatureData" target="GC_t_getTemperatureData">
+			</arc>
+			<arc id="id24" source="GC_CheckTemperature" target="GC_t_CheckTemperature">
+			</arc>
+			<arc id="id25" source="GC_t_getTemperatureData" target="GC_CheckTemperature">
+			</arc>
+			<arc id="id26" source="GC_getTemperatureData_e" target="GC_t_BeginTemperatureCheck">
+			</arc>
+			<arc id="id27" source="GC_t_BeginTemperatureCheck" target="GC_getTemperatureData">
+			</arc>
+			<arc id="id28" source="GC_getTemperatureThreshold" target="GC_t_getTemperatureThreshold">
+			</arc>
+			<arc id="id29" source="GC_t_getTemperatureThreshold" target="GC_CheckTemperatureThreshold_a">
+			</arc>
+			<arc id="id30" source="GC_CheckTemperatureThreshold_a" target="GC_t1_CheckTemperatureThreshold_a">
+			</arc>
+			<arc id="id31" source="GC_getTemperatureThreshold_e" target="GC_t_CheckTemperature">
+			</arc>
+			<arc id="id32" source="GC_t_CheckTemperature" target="GC_getTemperatureThreshold">
+			</arc>
+			<arc id="id33" source="GC_CheckTemperatureThreshold_a" target="GC_t2_CheckTemperatureThreshold_a">
+			</arc>
+			<arc id="id34" source="GC_t1_CheckTemperatureThreshold_a" target="GC_raiseTemperature">
+			</arc>
+			<arc id="id35" source="GC_raiseTemperature" target="GC_t_raiseTemperature">
+			</arc>
+			<arc id="id36" source="GC_t_raiseTemperature" target="GC_StandBy">
+				<graphics>
+					<position x="1350" y="625"/>
+					<position x="1180" y="625"/>
+					<position x="1180" y="130"/>
+					<position x="1695" y="130"/>
+				</graphics>
+			</arc>
+			<arc id="id37" source="GC_decreaseTemperature" target="GC_t_decreaseTemperature">
+			</arc>
+			<arc id="id38" source="GC_t2_CheckTemperatureThreshold_a" target="GC_decreaseTemperature">
+			</arc>
+			<arc id="id39" source="GC_t_decreaseTemperature" target="GC_StandBy">
+				<graphics>
+					<position x="1385" y="630"/>
+					<position x="1175" y="630"/>
+					<position x="1175" y="125"/>
+					<position x="1700" y="125"/>
+				</graphics>
+			</arc>
+			<arc id="id40" source="GC_getTemperatureData2" target="GC_t_getTemperatureData2">
+			</arc>
+			<arc id="id41" source="GC_getTemperatureData_e2" target="GC_t_getTemperatureData_loss2">
+			</arc>
+			<arc id="id42" source="GC_getTemperatureData_e2" target="GC_t_RetrieveSoilHumidityThreshold">
+			</arc>
+			<arc id="id43" source="GC_t_RetrieveSoilHumidityThreshold" target="GC_getTemperatureData2">
+			</arc>
+			<arc id="id44" source="GC_EnvCheckTemperature" target="GC_t_EnvCheckTemperature">
+			</arc>
+			<arc id="id45" source="GC_t_getTemperatureData2" target="GC_EnvCheckTemperature">
+			</arc>
+			<arc id="id46" source="GC_getHumidityData2" target="GC_t_getHumidityData2">
+			</arc>
+			<arc id="id47" source="GC_getHumidityData_e2" target="GC_t_getHumidityData_loss2">
+			</arc>
+			<arc id="id48" source="GC_t_EnvCheckTemperature" target="GC_getHumidityData2">
+			</arc>
+			<arc id="id49" source="GC_getHumidityData_e2" target="GC_t_EnvCheckTemperature">
+			</arc>
+			<arc id="id50" source="GC_EnvCheckHumidity" target="GC_t_EnvCheckHumidity">
+			</arc>
+			<arc id="id51" source="GC_t_getHumidityData2" target="GC_EnvCheckHumidity">
+			</arc>
+			<arc id="id52" source="GC_getSoilHumidityData2" target="GC_t_getSoilHumidityData2">
+			</arc>
+			<arc id="id53" source="GC_getSoilHumidityData_e2" target="GC_t_getSoilHumidityData_loss2">
+			</arc>
+			<arc id="id54" source="GC_getSoilHumidityData_e2" target="GC_t_EnvCheckHumidity">
+			</arc>
+			<arc id="id55" source="GC_t_EnvCheckHumidity" target="GC_getSoilHumidityData2">
+			</arc>
+			<arc id="id56" source="GC_EnvCheckSoilHumidity" target="GC_t_EnvCheckSoilHumidity">
+			</arc>
+			<arc id="id57" source="GC_t_getSoilHumidityData2" target="GC_EnvCheckSoilHumidity">
+			</arc>
+			<arc id="id58" source="GC_getEnvironmentThresholds" target="GC_t_getEnvironmentThresholds">
+			</arc>
+			<arc id="id59" source="GC_getEnvironmentThresholds_e" target="GC_t_getEnvironmentThresholds_loss">
+			</arc>
+			<arc id="id60" source="GC_getEnvironmentThresholds_e" target="GC_t_EnvCheckSoilHumidity">
+			</arc>
+			<arc id="id61" source="GC_t_EnvCheckSoilHumidity" target="GC_getEnvironmentThresholds">
+			</arc>
+			<arc id="id62" source="GC_CheckEnvironmentThresholds" target="GC_t_CheckEnvironmentThresholds">
+			</arc>
+			<arc id="id63" source="GC_t_getEnvironmentThresholds" target="GC_CheckEnvironmentThresholds">
+			</arc>
+			<arc id="id64" source="GC_t_CheckEnvironmentThresholds" target="GC_StandBy">
+				<graphics>
+					<position x="1730" y="845"/>
+					<position x="1540" y="845"/>
+					<position x="1540" y="170"/>
+				</graphics>
+			</arc>
+			<arc id="id65" source="GC_getHumidityData_e" target="GC_t_getHumidityData_loss">
+			</arc>
+			<arc id="id66" source="GC_getHumidityData_e" target="GC_t_BeginHumidityMonitoring">
+			</arc>
+			<arc id="id67" source="GC_getHumidityData" target="GC_t_getHumidityData">
+			</arc>
+			<arc id="id68" source="GC_t_BeginHumidityMonitoring" target="GC_getHumidityData">
+			</arc>
+			<arc id="id69" source="GC_CheckHumidity" target="GC_t_CheckHumidity">
+			</arc>
+			<arc id="id70" source="GC_t_getHumidityData" target="GC_CheckHumidity">
+			</arc>
+			<arc id="id71" source="GC_getHumidityThreshold_e" target="GC_t_getHumidityThreshold_loss">
+			</arc>
+			<arc id="id72" source="GC_getHumidityThreshold" target="GC_t_getHumidityThreshold">
+			</arc>
+			<arc id="id73" source="GC_getHumidityThreshold_e" target="GC_t_CheckHumidity">
+			</arc>
+			<arc id="id74" source="GC_t_CheckHumidity" target="GC_getHumidityThreshold">
+			</arc>
+			<arc id="id75" source="GC_CheckHumidityThreshold" target="GC_t_CheckHumidityThreshold">
+			</arc>
+			<arc id="id76" source="GC_t_getHumidityThreshold" target="GC_CheckHumidityThreshold">
+			</arc>
+			<arc id="id77" source="GC_notify_e" target="GC_t_notify_loss">
+			</arc>
+			<arc id="id78" source="GC_notify" target="GC_t_notify">
+			</arc>
+			<arc id="id79" source="GC_notify_e" target="GC_t_CheckHumidityThreshold">
+			</arc>
+			<arc id="id80" source="GC_t_CheckHumidityThreshold" target="GC_notify">
+			</arc>
+			<arc id="id81" source="GC_NotifyMobileApp" target="GC_t_NotifyMobileApp">
+			</arc>
+			<arc id="id82" source="GC_t_notify" target="GC_NotifyMobileApp">
+			</arc>
+			<arc id="id83" source="GC_t_CheckHumidityThreshold" target="GC_StandBy">
+				<graphics>
+					<position x="1945" y="550"/>
+					<position x="1945" y="175"/>
+					<position x="1905" y="145"/>
+					<position x="1735" y="145"/>
+				</graphics>
+			</arc>
+			<arc id="id84" source="GC_t_NotifyMobileApp" target="GC_StandBy">
+				<graphics>
+					<position x="1975" y="695"/>
+					<position x="2150" y="695"/>
+					<position x="2150" y="135"/>
+					<position x="1740" y="135"/>
+				</graphics>
+			</arc>
+			<arc id="id85" source="TS_StandBy" target="TS_t_StandBy">
+			</arc>
+			<arc id="id86" source="TS_RetrieveTemperatureData" target="TS_t_RetrieveTemperatureData">
+			</arc>
+			<arc id="id87" source="TS_getTemperatureData" target="TS_t_getTemperatureData">
+			</arc>
+			<arc id="id88" source="TS_getTemperatureData_e" target="TS_t_getTemperatureData_loss">
+			</arc>
+			<arc id="id89" source="TS_t_StandBy" target="TS_getTemperatureData">
+			</arc>
+			<arc id="id90" source="TS_getTemperatureData_e" target="TS_t_StandBy">
+			</arc>
+			<arc id="id91" source="TS_RetrieveTemperatureData_a" target="TS_t_RetrieveTemperatureData_a">
+			</arc>
+			<arc id="id92" source="TS_t_getTemperatureData" target="TS_RetrieveTemperatureData_a">
+			</arc>
+			<arc id="id93" source="TS_t_RetrieveTemperatureData_a" target="TS_RetrieveTemperatureData">
+			</arc>
+			<arc id="id94" source="TS_t_RetrieveTemperatureData" target="TS_StandBy">
+				<graphics>
+					<position x="230" y="495"/>
+					<position x="360" y="495"/>
+					<position x="360" y="270"/>
+					<position x="230" y="270"/>
+				</graphics>
+			</arc>
+			<arc id="id95" source="DB_StandBy" target="DB_t3_StandBy">
+			</arc>
+			<arc id="id96" source="DB_RetrieveSoilHumidityThreshold" target="DB_t_RetrieveSoilHumidityThreshold">
+			</arc>
+			<arc id="id97" source="DB_getSoilHumidityThreshold" target="DB_t_getSoilHumidityThreshold">
+			</arc>
+			<arc id="id98" source="DB_getSoilHumidityThreshold_e" target="DB_t_getSoilHumidityThreshold_loss">
+			</arc>
+			<arc id="id99" source="DB_t3_StandBy" target="DB_getSoilHumidityThreshold">
+			</arc>
+			<arc id="id100" source="DB_getSoilHumidityThreshold_e" target="DB_t3_StandBy">
+			</arc>
+			<arc id="id101" source="DB_RetrieveSoilHumidityThreshold_a" target="DB_t_RetrieveSoilHumidityThreshold_a">
+			</arc>
+			<arc id="id102" source="DB_t_getSoilHumidityThreshold" target="DB_RetrieveSoilHumidityThreshold_a">
+			</arc>
+			<arc id="id103" source="DB_t_RetrieveSoilHumidityThreshold_a" target="DB_RetrieveSoilHumidityThreshold">
+			</arc>
+			<arc id="id104" source="DB_getTemperatureThreshold_e" target="DB_t_getTemperatureThreshold_loss">
+			</arc>
+			<arc id="id105" source="DB_getTemperatureThreshold_e" target="DB_t1_StandBy">
+			</arc>
+			<arc id="id106" source="DB_getTemperatureThreshold" target="DB_t_getTemperatureThreshold">
+			</arc>
+			<arc id="id107" source="DB_t_getTemperatureThreshold" target="DB_RetrieveTemperatureThreshold_a">
+			</arc>
+			<arc id="id108" source="DB_RetrieveTemperatureThreshold_a" target="DB_t_RetrieveTemperatureThreshold_a">
+			</arc>
+			<arc id="id109" source="DB_t_RetrieveTemperatureThreshold_a" target="DB_RetrieveTemperatureThreshold">
+			</arc>
+			<arc id="id110" source="DB_RetrieveTemperatureThreshold" target="DB_t_tRetrieveTemperatureThreshold">
+			</arc>
+			<arc id="id111" source="DB_t1_StandBy" target="DB_getTemperatureThreshold">
+			</arc>
+			<arc id="id112" source="DB_StandBy" target="DB_t1_StandBy">
+				<graphics>
+					<position x="1005" y="870"/>
+				</graphics>
+			</arc>
+			<arc id="id113" source="DB_getHumidityThreshold_e" target="DB_t_getHumidityThreshold_loss">
+			</arc>
+			<arc id="id114" source="DB_getHumidityThreshold_e" target="DB_t2_StandBy">
+			</arc>
+			<arc id="id115" source="DB_getHumidityThreshold" target="DB_t_getHumidityThreshold">
+			</arc>
+			<arc id="id116" source="DB_t_getHumidityThreshold" target="DB_RetrieveHumidityThreshold_a">
+			</arc>
+			<arc id="id117" source="DB_RetrieveHumidityThreshold_a" target="DB_t_RetrieveHumidityThreshold_a">
+			</arc>
+			<arc id="id118" source="DB_t_RetrieveHumidityThreshold_a" target="DB_RetrieveHumidityThreshold">
+			</arc>
+			<arc id="id119" source="DB_RetrieveHumidityThreshold" target="DB_t_RetrieveHumidityThreshold">
+			</arc>
+			<arc id="id120" source="DB_t2_StandBy" target="DB_getHumidityThreshold">
+			</arc>
+			<arc id="id121" source="DB_StandBy" target="DB_t2_StandBy">
+			</arc>
+			<arc id="id122" source="DB_RetrieveEnvironmentThresholds" target="DB_t_RetrieveEnvironmentThresholds">
+			</arc>
+			<arc id="id123" source="DB_getEnvironmentThresholds" target="DB_t_getEnvironmentThresholds">
+			</arc>
+			<arc id="id124" source="DB_getEnvironmentThresholds_e" target="DB_t_getEnvironmentThresholds_loss">
+			</arc>
+			<arc id="id125" source="DB_t4_StandBy" target="DB_getEnvironmentThresholds">
+			</arc>
+			<arc id="id126" source="DB_getEnvironmentThresholds_e" target="DB_t4_StandBy">
+			</arc>
+			<arc id="id127" source="DB_RetrieveEnvironmentThresholds_a" target="DB_t_RetrieveEnvironmentThresholds_a">
+			</arc>
+			<arc id="id128" source="DB_t_getEnvironmentThresholds" target="DB_RetrieveEnvironmentThresholds_a">
+			</arc>
+			<arc id="id129" source="DB_t_RetrieveEnvironmentThresholds_a" target="DB_RetrieveEnvironmentThresholds">
+			</arc>
+			<arc id="id130" source="DB_StandBy" target="DB_t4_StandBy">
+				<graphics>
+					<position x="1405" y="870"/>
+				</graphics>
+			</arc>
+			<arc id="id131" source="DB_t_RetrieveHumidityThreshold" target="DB_StandBy">
+				<graphics>
+					<position x="1170" y="1095"/>
+					<position x="990" y="1095"/>
+					<position x="990" y="895"/>
+					<position x="1015" y="875"/>
+					<position x="1185" y="875"/>
+				</graphics>
+			</arc>
+			<arc id="id132" source="DB_t_tRetrieveTemperatureThreshold" target="DB_StandBy">
+				<graphics>
+					<position x="955" y="1095"/>
+					<position x="770" y="1095"/>
+					<position x="770" y="860"/>
+					<position x="1185" y="860"/>
+				</graphics>
+			</arc>
+			<arc id="id133" source="DB_t_RetrieveSoilHumidityThreshold" target="DB_StandBy">
+				<graphics>
+					<position x="1235" y="1095"/>
+					<position x="1420" y="1095"/>
+					<position x="1420" y="895"/>
+					<position x="1400" y="875"/>
+					<position x="1215" y="875"/>
+				</graphics>
+			</arc>
+			<arc id="id134" source="DB_t_RetrieveEnvironmentThresholds" target="DB_StandBy">
+				<graphics>
+					<position x="1455" y="1095"/>
+					<position x="1645" y="1095"/>
+					<position x="1645" y="860"/>
+					<position x="1215" y="860"/>
+				</graphics>
+			</arc>
+			<arc id="id135" source="AC_StandBy" target="AC_t2_StandBy">
+			</arc>
+			<arc id="id136" source="AC_DecreaseTemperature" target="AC_t_DecreaseTemperature">
+			</arc>
+			<arc id="id137" source="AC_decreaseTemperature" target="AC_t_decreaseTemperature">
+			</arc>
+			<arc id="id138" source="AC_decreaseTemperature_e" target="AC_t_decreaseTemperature_loss">
+			</arc>
+			<arc id="id139" source="AC_t2_StandBy" target="AC_decreaseTemperature">
+			</arc>
+			<arc id="id140" source="AC_decreaseTemperature_e" target="AC_t2_StandBy">
+			</arc>
+			<arc id="id141" source="AC_DecreaseTemperature_a" target="AC_t_DecreaseTemperature_a">
+			</arc>
+			<arc id="id142" source="AC_t_decreaseTemperature" target="AC_DecreaseTemperature_a">
+			</arc>
+			<arc id="id143" source="AC_t_DecreaseTemperature_a" target="AC_DecreaseTemperature">
+			</arc>
+			<arc id="id144" source="AC_t_DecreaseTemperature" target="AC_StandBy">
+				<graphics>
+					<position x="980" y="745"/>
+					<position x="1150" y="745"/>
+					<position x="1150" y="510"/>
+					<position x="970" y="510"/>
+				</graphics>
+			</arc>
+			<arc id="id145" source="AC_raiseTemperature_e" target="AC_t_raiseTemperature_loss">
+			</arc>
+			<arc id="id146" source="AC_raiseTemperature_e" target="AC_t1_StandBy">
+			</arc>
+			<arc id="id147" source="AC_raiseTemperature" target="AC_t_raiseTemperature">
+			</arc>
+			<arc id="id148" source="AC_t_raiseTemperature" target="AC_RaiseTemperature_a">
+			</arc>
+			<arc id="id149" source="AC_RaiseTemperature_a" target="AC_t_RaiseTemperature_a">
+			</arc>
+			<arc id="id150" source="AC_t_RaiseTemperature_a" target="AC_RaiseTemperature">
+			</arc>
+			<arc id="id151" source="AC_RaiseTemperature" target="AC_t_RaiseTemperature">
+			</arc>
+			<arc id="id152" source="AC_t1_StandBy" target="AC_raiseTemperature">
+			</arc>
+			<arc id="id153" source="AC_StandBy" target="AC_t1_StandBy">
+			</arc>
+			<arc id="id154" source="AC_t_RaiseTemperature" target="AC_StandBy">
+				<graphics>
+					<position x="920" y="745"/>
+					<position x="760" y="745"/>
+					<position x="760" y="510"/>
+					<position x="930" y="510"/>
+				</graphics>
+			</arc>
+			<arc id="id155" source="GC_t_getTemperatureData" target="trig_getTemperatureData">
+				<graphics>
+					<position x="1365" y="380"/>
+					<position x="1135" y="380"/>
+					<position x="1135" y="150"/>
+					<position x="860" y="150"/>
+				</graphics>
+			</arc>
+			<arc id="id156" source="trig_getTemperatureData" target="trig_t_getTemperatureData">
+			</arc>
+			<arc id="id157" source="GC_t_triggerTemperatureCheck" target="GC_getTemperatureData_e">
+			</arc>
+			<arc id="id158" source="trig_getTemperatureThreshold" target="trig_t_getTemperatureThreshold">
+			</arc>
+			<arc id="id159" source="GC_t_getTemperatureThreshold" target="copy_DSB_input_e">
+				<graphics>
+					<position x="1360" y="510"/>
+					<position x="1165" y="510"/>
+					<position x="1165" y="755"/>
+					<position x="290" y="755"/>
+				</graphics>
+			</arc>
+			<arc id="id160" source="trig_t_getTemperatureThreshold" target="DB_getTemperatureThreshold_e">
+				<graphics>
+					<position x="890" y="890"/>
+				</graphics>
+			</arc>
+			<arc id="id161" source="reply_getTemperatureThreshold" target="GC_t1_CheckTemperatureThreshold_a">
+				<graphics>
+					<position x="1190" y="545"/>
+					<position x="1345" y="545"/>
+				</graphics>
+			</arc>
+			<arc id="id162" source="reply_getTemperatureThreshold" target="GC_t2_CheckTemperatureThreshold_a">
+				<graphics>
+					<position x="1195" y="750"/>
+					<position x="1195" y="550"/>
+					<position x="1340" y="550"/>
+				</graphics>
+			</arc>
+			<arc id="id163" source="trig_raiseTemperature" target="trig_t_raiseTemperature">
+			</arc>
+			<arc id="id164" source="trig_decreaseTemperature" target="trig_t_decreaseTemperature">
+			</arc>
+			<arc id="id165" source="GC_t_raiseTemperature" target="trig_raiseTemperature">
+				<graphics>
+					<position x="1340" y="640"/>
+					<position x="1160" y="640"/>
+					<position x="1160" y="440"/>
+					<position x="880" y="440"/>
+				</graphics>
+			</arc>
+			<arc id="id166" source="GC_t_decreaseTemperature" target="trig_decreaseTemperature">
+				<graphics>
+					<position x="1385" y="645"/>
+					<position x="1155" y="645"/>
+					<position x="1155" y="445"/>
+					<position x="1060" y="445"/>
+				</graphics>
+			</arc>
+			<arc id="id167" source="trig_t_raiseTemperature" target="AC_raiseTemperature_e">
+				<graphics>
+					<position x="860" y="535"/>
+				</graphics>
+			</arc>
+			<arc id="id168" source="trig_t_decreaseTemperature" target="AC_decreaseTemperature_e">
+				<graphics>
+					<position x="1040" y="535"/>
+				</graphics>
+			</arc>
+			<arc id="id169" source="ManagingTemperature" target="arrival">
+			</arc>
+			<arc id="id170" source="arrival" target="GC_triggerTemperatureCheck_e">
+			</arc>
+			<arc id="id171" source="DSB_StandBy" target="DSB_t_StandBy">
+			</arc>
+			<arc id="id172" source="DSB_input" target="DSB_t_input">
+			</arc>
+			<arc id="id173" source="DSB_input_e" target="DSB_t_StandBy">
+			</arc>
+			<arc id="id174" source="DSB_t_StandBy" target="DSB_input">
+			</arc>
+			<arc id="id175" source="BKP_noerrors" target="BKP_t_noerrors">
+			</arc>
+			<arc id="id176" source="BKP_errors" target="BKP_t_errors">
+			</arc>
+			<arc id="id177" source="BKP_DiscardOutput" target="BKP_t_DiscardOutput">
+			</arc>
+			<arc id="id178" source="BKP_SendOutput" target="BKP_t_SendOutput">
+			</arc>
+			<arc id="id179" source="BKP_t_noerrors" target="BKP_DiscardOutput">
+			</arc>
+			<arc id="id180" source="BKP_t_errors" target="BKP_SendOutput">
+			</arc>
+			<arc id="id181" source="DSB_SendInput" target="DSB_t_SendInput">
+			</arc>
+			<arc id="id182" source="DSB_t_input" target="DSB_SendInput">
+			</arc>
+			<arc id="id183" source="DSB_t_SendInput" target="DSB_StandBy">
+				<graphics>
+					<position x="415" y="220"/>
+					<position x="490" y="220"/>
+					<position x="490" y="50"/>
+					<position x="415" y="50"/>
+				</graphics>
+			</arc>
+			<arc id="id184" source="SendInput_PMR" target="t_SendInput_PMR">
+			</arc>
+			<arc id="id185" source="DSB_t_SendInput" target="SendInput_PMR">
+			</arc>
+			<arc id="id186" source="SendOutput_BKP" target="t_SendOutput_BKP">
+			</arc>
+			<arc id="id187" source="DSB_t_SendInput" target="SendOutput_BKP">
+				<graphics>
+					<position x="410" y="225"/>
+					<position x="500" y="225"/>
+				</graphics>
+			</arc>
+			<arc id="id188" source="NoErrors" target="t_NoErrors">
+			</arc>
+			<arc id="id189" source="t_NoErrors" target="BKP_noerrors_e">
+				<graphics>
+					<position x="355" y="550"/>
+					<position x="385" y="560"/>
+					<position x="475" y="560"/>
+				</graphics>
+			</arc>
+			<arc id="id190" source="t_SendInput_PMR" target="TS_getTemperatureData_e">
+			</arc>
+			<arc id="id191" source="TS1_StandBy" target="TS1_t_StandBy">
+			</arc>
+			<arc id="id192" source="TS1_getTemperatureData" target="TS1_t_getTemperatureData">
+			</arc>
+			<arc id="id193" source="TS1_getTemperatureData_e" target="TS1_t_getTemperatureData_loss">
+			</arc>
+			<arc id="id194" source="TS1_t_StandBy" target="TS1_getTemperatureData">
+			</arc>
+			<arc id="id195" source="TS1_getTemperatureData_e" target="TS1_t_StandBy">
+			</arc>
+			<arc id="id196" source="TS1_RetrieveTemperatureData_a" target="TS1_t_RetrieveTemperatureData_a">
+			</arc>
+			<arc id="id197" source="TS1_t_getTemperatureData" target="TS1_RetrieveTemperatureData_a">
+			</arc>
+			<arc id="id198" source="TS1_t_RetrieveTemperatureData_a" target="TS1_RetrieveTemperatureData">
+			</arc>
+			<arc id="id199" source="BKP_noerrors_e" target="TS1_t1_DiscardOrSend">
+			</arc>
+			<arc id="id200" source="TS1_t1_DiscardOrSend" target="BKP_noerrors">
+			</arc>
+			<arc id="id201" source="TS1_t2_DiscardOrSend" target="BKP_errors">
+			</arc>
+			<arc id="id202" source="BKP_t_DiscardOutput" target="TS1_StandBy">
+				<graphics>
+					<position x="520" y="705"/>
+					<position x="395" y="705"/>
+					<position x="395" y="275"/>
+					<position x="550" y="275"/>
+				</graphics>
+			</arc>
+			<arc id="id203" source="BKP_t_SendOutput" target="GC_getTemperatureThreshold_e">
+				<graphics>
+					<position x="615" y="650"/>
+					<position x="750" y="650"/>
+					<position x="750" y="420"/>
+					<position x="1320" y="420"/>
+				</graphics>
+			</arc>
+			<arc id="id204" source="t_NoErrors" target="GC_getTemperatureThreshold_e">
+				<graphics>
+					<position x="210" y="570"/>
+					<position x="210" y="710"/>
+					<position x="755" y="710"/>
+					<position x="755" y="425"/>
+					<position x="1310" y="425"/>
+				</graphics>
+			</arc>
+			<arc id="id205" source="BKP_t_SendOutput" target="TS1_StandBy">
+				<graphics>
+					<position x="620" y="705"/>
+					<position x="740" y="705"/>
+					<position x="740" y="270"/>
+					<position x="590" y="270"/>
+				</graphics>
+			</arc>
+			<arc id="id206" source="trig_t_getTemperatureData" target="DSB_input_e">
+				<graphics>
+					<position x="525" y="25"/>
+					<position x="335" y="25"/>
+					<position x="335" y="75"/>
+				</graphics>
+			</arc>
+			<arc id="id207" source="t_SendOutput_BKP" target="TS1_getTemperatureData_e">
+			</arc>
+			<arc id="id208" source="TS_t_RetrieveTemperatureData" target="NoErrors">
+			</arc>
+			<arc id="id209" source="TS1_RetrieveTemperatureData" target="TS1_t_RetrieveTemperatureData">
+			</arc>
+			<arc id="id210" source="TS1_t_RetrieveTemperatureData" target="TS1_DiscardOrSend">
+			</arc>
+			<arc id="id211" source="TS1_DiscardOrSend" target="TS1_t1_DiscardOrSend">
+			</arc>
+			<arc id="id212" source="TS1_DiscardOrSend" target="TS1_t2_DiscardOrSend">
+			</arc>
+			<arc id="id213" source="TS_t_getTemperatureData_loss" target="TS_errors">
+			</arc>
+			<arc id="id214" source="TS_errors" target="BKP_t_SendOutput">
+				<graphics>
+					<position x="170" y="720"/>
+					<position x="585" y="720"/>
+				</graphics>
+			</arc>
+			<arc id="id215" source="copy_DSB_StandBy" target="copy_DSB_t_StandBy">
+			</arc>
+			<arc id="id216" source="copy_DSB_input" target="copy_DSB_t_input">
+			</arc>
+			<arc id="id217" source="copy_DSB_input_e" target="copy_DSB_t_StandBy">
+			</arc>
+			<arc id="id218" source="copy_DSB_t_StandBy" target="copy_DSB_input">
+			</arc>
+			<arc id="id219" source="copy_DSB_SendInput" target="copy_DSB_t_SendInput">
+			</arc>
+			<arc id="id220" source="copy_DSB_t_input" target="copy_DSB_SendInput">
+			</arc>
+			<arc id="id221" source="copy_DSB_t_SendInput" target="copy_DSB_StandBy">
+				<graphics>
+					<position x="345" y="940"/>
+					<position x="420" y="940"/>
+					<position x="420" y="770"/>
+					<position x="345" y="770"/>
+				</graphics>
+			</arc>
+			<arc id="id222" source="copy_SendInput_PMR" target="copy_t_SendInput_PMR">
+			</arc>
+			<arc id="id223" source="copy_DSB_t_SendInput" target="copy_SendInput_PMR">
+			</arc>
+			<arc id="id224" source="copy_SendOutput_BKP" target="copy_t_SendOutput_BKP">
+			</arc>
+			<arc id="id225" source="copy_DSB_t_SendInput" target="copy_SendOutput_BKP">
+				<graphics>
+					<position x="340" y="945"/>
+					<position x="430" y="945"/>
+				</graphics>
+			</arc>
+			<arc id="id226" source="copy_DB_getTemperatureThreshold_e" target="copy_DB_t_getTemperatureThreshold_loss">
+			</arc>
+			<arc id="id227" source="copy_DB_getTemperatureThreshold_e" target="copy_DB_t1_StandBy">
+			</arc>
+			<arc id="id228" source="copy_DB_getTemperatureThreshold" target="copy_DB_t_getTemperatureThreshold">
+			</arc>
+			<arc id="id229" source="copy_DB_t_getTemperatureThreshold" target="copy_DB_RetrieveTemperatureThreshold_a">
+			</arc>
+			<arc id="id230" source="copy_DB_RetrieveTemperatureThreshold_a" target="copy_DB_t_RetrieveTemperatureThreshold_a">
+			</arc>
+			<arc id="id231" source="copy_DB_t_RetrieveTemperatureThreshold_a" target="copy_DB_RetrieveTemperatureThreshold">
+			</arc>
+			<arc id="id232" source="copy_DB_RetrieveTemperatureThreshold" target="copy_DB_t_tRetrieveTemperatureThreshold">
+			</arc>
+			<arc id="id233" source="copy_DB_t1_StandBy" target="copy_DB_getTemperatureThreshold">
+			</arc>
+			<arc id="id234" source="copy_DB_StandBy" target="copy_DB_t1_StandBy">
+				<graphics>
+					<position x="1945" y="960"/>
+				</graphics>
+			</arc>
+			<arc id="id235" source="copy_trig_getTemperatureThreshold" target="copy_trig_t_getTemperatureThreshold">
+			</arc>
+			<arc id="id236" source="copy_trig_t_getTemperatureThreshold" target="copy_DB_getTemperatureThreshold_e">
+				<graphics>
+					<position x="1830" y="980"/>
+				</graphics>
+			</arc>
+			<arc id="id237" source="copy_t_SendInput_PMR" target="trig_getTemperatureThreshold">
+				<graphics>
+					<position x="130" y="975"/>
+					<position x="750" y="975"/>
+					<position x="750" y="810"/>
+				</graphics>
+			</arc>
+			<arc id="id238" source="copy_t_SendOutput_BKP" target="copy_trig_getTemperatureThreshold">
+				<graphics>
+					<position x="450" y="1100"/>
+					<position x="1695" y="1100"/>
+					<position x="1695" y="900"/>
+				</graphics>
+			</arc>
+			<arc id="id239" source="CMR_StandBy" target="CMR_t_StandBy">
+			</arc>
+			<arc id="id240" source="CMR_outputreceived" target="CMR_t_outputreceived">
+			</arc>
+			<arc id="id241" source="CMR_outputreceived_e" target="CMR_t_StandBy">
+			</arc>
+			<arc id="id242" source="CMR_t_StandBy" target="CMR_outputreceived">
+			</arc>
+			<arc id="id243" source="CMR_Compare" target="CMR_t_Compare">
+			</arc>
+			<arc id="id244" source="CMR_t_outputreceived" target="CMR_Compare">
+			</arc>
+			<arc id="id245" source="CMR_t_Compare" target="CMR_StandBy">
+				<graphics>
+					<position x="345" y="1370"/>
+					<position x="440" y="1370"/>
+					<position x="440" y="1200"/>
+					<position x="345" y="1200"/>
+				</graphics>
+			</arc>
+			<arc id="id246" source="CMR_atleastone" target="CMR_t_Compare">
+			</arc>
+			<arc id="id247" source="copy_DB_t_tRetrieveTemperatureThreshold" target="copy_DB_StandBy">
+				<graphics>
+					<position x="1980" y="1180"/>
+				</graphics>
+			</arc>
+			<arc id="id248" source="copy_DB_t_tRetrieveTemperatureThreshold" target="CMR_outputreceived_e">
+				<graphics>
+					<position x="1895" y="1195"/>
+					<position x="295" y="1195"/>
+					<position x="295" y="1225"/>
+				</graphics>
+			</arc>
+			<arc id="id249" source="DB_t_tRetrieveTemperatureThreshold" target="CMR_outputreceived_e">
+				<graphics>
+					<position x="970" y="1175"/>
+					<position x="285" y="1175"/>
+					<position x="285" y="1225"/>
+				</graphics>
+			</arc>
+			<arc id="id250" source="CMR_t_Compare" target="reply_getTemperatureThreshold">
+				<graphics>
+					<position x="345" y="1380"/>
+					<position x="740" y="1380"/>
+					<position x="740" y="770"/>
+				</graphics>
+			</arc>
+		</page>
+	</net>
+</pnml>
