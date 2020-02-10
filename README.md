@@ -1,7 +1,7 @@
 # UML2GSPN
 
 This repository contains the artifacts created for the paper:
-#### From Software Architecture to Analysis Models and Back: Model-Driven Refactoring Aimed at Availability Improvement
+### From Software Architecture to Analysis Models and Back: <br/>Model-Driven Refactoring Aimed at Availability Improvement
 
 The repository folders are organized as follows:
 ##### GSPN
