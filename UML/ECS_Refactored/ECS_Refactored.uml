@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:DAM_Profile.DAM_UML_Extensions.System.Core="http:///DAM_Profile/DAM_UML_Extensions/System/Core.ecore" xmlns:GQAM="http://www.eclipse.org/papyrus/GQAM/1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///DAM_Profile/DAM_UML_Extensions/System/Core.ecore ../MARTE-DAM/model.profile.uml#_Xe8LxECNEeOuR_-py12dTQ http://www.eclipse.org/papyrus/GQAM/1 http://www.eclipse.org/papyrus/MARTE/1#//GQAM">
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ActionLanguage="http://www.omg.org/spec/ALF/20120827/ActionLanguage-Profile" xmlns:DAM_Profile.DAM_UML_Extensions.System.Core="http:///DAM_Profile/DAM_UML_Extensions/System/Core.ecore" xmlns:GQAM="http://www.eclipse.org/papyrus/GQAM/1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.omg.org/spec/ALF/20120827/ActionLanguage-Profile pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ http:///DAM_Profile/DAM_UML_Extensions/System/Core.ecore ../MARTE-DAM/model.profile.uml#_Xe8LxECNEeOuR_-py12dTQ http://www.eclipse.org/papyrus/GQAM/1 http://www.eclipse.org/papyrus/MARTE/1#//GQAM">
   <uml:Model xmi:id="_49EFwDnTEemoANrv04JsgA" name="ECS">
     <packageImport xmi:type="uml:PackageImport" xmi:id="_5N-2oDnTEemoANrv04JsgA">
       <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
@@ -171,25 +171,44 @@ nient'altro</body>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_-OMdoOmaEemERe9a7AM7fg" client="_EGQAsDnUEemoANrv04JsgA" supplier="_Oz9VEKIVEemmspchR1BZAQ"/>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_-j5A0OmaEemERe9a7AM7fg" client="_EGQAsDnUEemoANrv04JsgA" supplier="_2hXtYKI0EemC55frPQGZ5Q"/>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_ktcVUOmcEemyPOZl7rDv_A" client="_EGQAsDnUEemoANrv04JsgA" supplier="_in5lIOmcEemyPOZl7rDv_A"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_hml4gEHVEeqZe9L98U6sGA" client="_EGQAsDnUEemoANrv04JsgA" supplier="_vUFYsEHUEeqZe9L98U6sGA"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_jRDPMEHVEeqZe9L98U6sGA" client="_EGQAsDnUEemoANrv04JsgA" supplier="_NDpY4EHVEeqZe9L98U6sGA"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_10tXoEHVEeqZe9L98U6sGA" client="_EGQAsDnUEemoANrv04JsgA" supplier="_oB4g8EHVEeqZe9L98U6sGA"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_Ccc7QEHWEeqZe9L98U6sGA" client="_EGQAsDnUEemoANrv04JsgA" supplier="_4qQBYEHVEeqZe9L98U6sGA"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_PApboEHWEeqZe9L98U6sGA" client="_EGQAsDnUEemoANrv04JsgA" supplier="_Ejuw0EHWEeqZe9L98U6sGA"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_FYnqEEHZEeq9h9ecLB_bWQ" client="_EGQAsDnUEemoANrv04JsgA" supplier="_-UsUUEHYEeq9h9ecLB_bWQ"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_PcwBcEHZEeq9h9ecLB_bWQ" client="_EGQAsDnUEemoANrv04JsgA" supplier="_Hj5O0EHZEeq9h9ecLB_bWQ"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_q_hZ8EHZEeq9h9ecLB_bWQ" client="_EGQAsDnUEemoANrv04JsgA" supplier="_mRhZwEHZEeq9h9ecLB_bWQ"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_B3RNwEHaEeq9h9ecLB_bWQ" client="_EGQAsDnUEemoANrv04JsgA" supplier="_7Da7YEHZEeq9h9ecLB_bWQ"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Component" xmi:id="_GJuUUDnUEemoANrv04JsgA" name="TemperatureSensor">
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_eCbYwEHWEeq9h9ecLB_bWQ" client="_GJuUUDnUEemoANrv04JsgA" supplier="_d_ahAEHWEeq9h9ecLB_bWQ" contract="_d_ahAEHWEeq9h9ecLB_bWQ"/>
       <packagedElement xmi:type="uml:CallEvent" xmi:id="_rBhmgDwZEemRoZ21IvU7Vw" name="getTemperatureData"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Component" xmi:id="_PIg0QDnUEemoANrv04JsgA" name="Database">
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_uRDxQEHbEeq9h9ecLB_bWQ" client="_PIg0QDnUEemoANrv04JsgA" supplier="_uQfwkEHbEeq9h9ecLB_bWQ" contract="_uQfwkEHbEeq9h9ecLB_bWQ"/>
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_e4U3QEHcEeq9h9ecLB_bWQ" client="_PIg0QDnUEemoANrv04JsgA" supplier="_e3vocEHcEeq9h9ecLB_bWQ" contract="_e3vocEHcEeq9h9ecLB_bWQ"/>
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_zlvhgEHcEeq9h9ecLB_bWQ" client="_PIg0QDnUEemoANrv04JsgA" supplier="_zlJEkEHcEeq9h9ecLB_bWQ" contract="_zlJEkEHcEeq9h9ecLB_bWQ"/>
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_VT-9wEHdEeq9h9ecLB_bWQ" client="_PIg0QDnUEemoANrv04JsgA" supplier="_VTU2cEHdEeq9h9ecLB_bWQ" contract="_VTU2cEHdEeq9h9ecLB_bWQ"/>
       <packagedElement xmi:type="uml:CallEvent" xmi:id="_shTdkDwhEemAu6mRqi7cwQ" name="getTemperatureThreshold"/>
       <packagedElement xmi:type="uml:CallEvent" xmi:id="_wUHn4DwhEemAu6mRqi7cwQ" name="getEnvironmentThresholds"/>
       <packagedElement xmi:type="uml:CallEvent" xmi:id="_1qsrADwhEemAu6mRqi7cwQ" name="getHumidityThreshold"/>
       <packagedElement xmi:type="uml:CallEvent" xmi:id="_5WyiQDwhEemAu6mRqi7cwQ" name="getSoilHumidityThreshold"/>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_6TBBgOmaEemERe9a7AM7fg" client="_PIg0QDnUEemoANrv04JsgA" supplier="_s0PR0KIVEemmspchR1BZAQ"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_-a37MEHgEeq9h9ecLB_bWQ" client="_PIg0QDnUEemoANrv04JsgA" supplier="_3lcUcEHgEeq9h9ecLB_bWQ"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Component" xmi:id="_rkO0sDnZEemoANrv04JsgA" name="AirConditioner">
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_vUoyUEHUEeqZe9L98U6sGA" client="_rkO0sDnZEemoANrv04JsgA" supplier="_vUFYsEHUEeqZe9L98U6sGA" contract="_vUFYsEHUEeqZe9L98U6sGA"/>
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_NEGr4EHVEeqZe9L98U6sGA" client="_rkO0sDnZEemoANrv04JsgA" supplier="_NDpY4EHVEeqZe9L98U6sGA" contract="_NDpY4EHVEeqZe9L98U6sGA"/>
       <packagedElement xmi:type="uml:CallEvent" xmi:id="_TYPHYDwhEemAu6mRqi7cwQ" name="raiseTemperature"/>
       <packagedElement xmi:type="uml:CallEvent" xmi:id="_ZlpE0DwhEemAu6mRqi7cwQ" name="decreaseTemperature"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Component" xmi:id="_llNrkDpoEemzzZWhRxlHtQ" name="AirHumiditySensor">
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_s922QEHWEeq9h9ecLB_bWQ" client="_llNrkDpoEemzzZWhRxlHtQ" supplier="_s9Bv0EHWEeq9h9ecLB_bWQ" contract="_s9Bv0EHWEeq9h9ecLB_bWQ"/>
       <packagedElement xmi:type="uml:CallEvent" xmi:id="__A438DwZEem87oUvZisqRg" name="getHumidityData"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Component" xmi:id="_772WYDpoEemzzZWhRxlHtQ" name="SoilHumiditySensor">
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_RK_hYEHYEeq9h9ecLB_bWQ" client="_772WYDpoEemzzZWhRxlHtQ" supplier="_RKWBIEHYEeq9h9ecLB_bWQ" contract="_RKWBIEHYEeq9h9ecLB_bWQ"/>
       <packagedElement xmi:type="uml:CallEvent" xmi:id="_F2qc8DwaEem87oUvZisqRg" name="getSoilHumidityData"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Component" xmi:id="_k4qTUDqDEemA9ZjYftTs3g" name="MobileApp">
@@ -450,18 +469,42 @@ nient'altro</body>
       <message xmi:type="uml:Message" xmi:id="_-dwFMKIgEemC55frPQGZ5Q" name=" " messageSort="reply" receiveEvent="_-dwsQaIgEemC55frPQGZ5Q" sendEvent="_-dwsQKIgEemC55frPQGZ5Q"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Component" xmi:id="_Oz9VEKIVEemmspchR1BZAQ" name="HS_Distributor">
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_4qtUYEHVEeqZe9L98U6sGA" client="_Oz9VEKIVEemmspchR1BZAQ" supplier="_4qQBYEHVEeqZe9L98U6sGA" contract="_4qQBYEHVEeqZe9L98U6sGA"/>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_BVSKYOmbEemERe9a7AM7fg" client="_Oz9VEKIVEemmspchR1BZAQ" supplier="_llNrkDpoEemzzZWhRxlHtQ"/>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_BqjPwOmbEemERe9a7AM7fg" client="_Oz9VEKIVEemmspchR1BZAQ" supplier="_YOQFQKIVEemmspchR1BZAQ"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_zvx2AEHWEeq9h9ecLB_bWQ" client="_Oz9VEKIVEemmspchR1BZAQ" supplier="_s9Bv0EHWEeq9h9ecLB_bWQ"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_0PdmMEHXEeq9h9ecLB_bWQ" client="_Oz9VEKIVEemmspchR1BZAQ" supplier="_3zXAMEHWEeq9h9ecLB_bWQ"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Component" xmi:id="_YOQFQKIVEemmspchR1BZAQ" name="AirHumiditySensor1"/>
+    <packagedElement xmi:type="uml:Component" xmi:id="_YOQFQKIVEemmspchR1BZAQ" name="AirHumiditySensor1">
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_30BHgEHWEeq9h9ecLB_bWQ" client="_YOQFQKIVEemmspchR1BZAQ" supplier="_3zXAMEHWEeq9h9ecLB_bWQ" contract="_3zXAMEHWEeq9h9ecLB_bWQ"/>
+    </packagedElement>
     <packagedElement xmi:type="uml:Component" xmi:id="_g9a00KIVEemmspchR1BZAQ" name="DB_Distributor">
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_-VQVAEHYEeq9h9ecLB_bWQ" client="_g9a00KIVEemmspchR1BZAQ" supplier="_-UsUUEHYEeq9h9ecLB_bWQ" contract="_-UsUUEHYEeq9h9ecLB_bWQ"/>
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_HklLUEHZEeq9h9ecLB_bWQ" client="_g9a00KIVEemmspchR1BZAQ" supplier="_Hj5O0EHZEeq9h9ecLB_bWQ" contract="_Hj5O0EHZEeq9h9ecLB_bWQ"/>
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_mSH2sEHZEeq9h9ecLB_bWQ" client="_g9a00KIVEemmspchR1BZAQ" supplier="_mRhZwEHZEeq9h9ecLB_bWQ" contract="_mRhZwEHZEeq9h9ecLB_bWQ"/>
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_7EJ7MEHZEeq9h9ecLB_bWQ" client="_g9a00KIVEemmspchR1BZAQ" supplier="_7Da7YEHZEeq9h9ecLB_bWQ" contract="_7Da7YEHZEeq9h9ecLB_bWQ"/>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_5PcEoOmaEemERe9a7AM7fg" client="_g9a00KIVEemmspchR1BZAQ" supplier="_PIg0QDnUEemoANrv04JsgA"/>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_5kyCgOmaEemERe9a7AM7fg" client="_g9a00KIVEemmspchR1BZAQ" supplier="_ofuvsKIVEemmspchR1BZAQ"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_YScIYEHcEeq9h9ecLB_bWQ" client="_g9a00KIVEemmspchR1BZAQ" supplier="_uQfwkEHbEeq9h9ecLB_bWQ"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_qNmGYEHcEeq9h9ecLB_bWQ" client="_g9a00KIVEemmspchR1BZAQ" supplier="_e3vocEHcEeq9h9ecLB_bWQ"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_8VGeUEHcEeq9h9ecLB_bWQ" client="_g9a00KIVEemmspchR1BZAQ" supplier="_zlJEkEHcEeq9h9ecLB_bWQ"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_g-jugEHdEeq9h9ecLB_bWQ" client="_g9a00KIVEemmspchR1BZAQ" supplier="_VTU2cEHdEeq9h9ecLB_bWQ"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_POXN4EHeEeq9h9ecLB_bWQ" client="_g9a00KIVEemmspchR1BZAQ" supplier="_DDDuoEHeEeq9h9ecLB_bWQ"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_hq2-YEHeEeq9h9ecLB_bWQ" client="_g9a00KIVEemmspchR1BZAQ" supplier="_W-AaIEHeEeq9h9ecLB_bWQ"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_y2OeMEHeEeq9h9ecLB_bWQ" client="_g9a00KIVEemmspchR1BZAQ" supplier="_pv0TUEHeEeq9h9ecLB_bWQ"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_9LPxQEHeEeq9h9ecLB_bWQ" client="_g9a00KIVEemmspchR1BZAQ" supplier="_1ZYXcEHeEeq9h9ecLB_bWQ"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Component" xmi:id="_ofuvsKIVEemmspchR1BZAQ" name="Database1">
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_DDyucEHeEeq9h9ecLB_bWQ" client="_ofuvsKIVEemmspchR1BZAQ" supplier="_DDDuoEHeEeq9h9ecLB_bWQ" contract="_DDDuoEHeEeq9h9ecLB_bWQ"/>
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_W-zEUEHeEeq9h9ecLB_bWQ" client="_ofuvsKIVEemmspchR1BZAQ" supplier="_W-AaIEHeEeq9h9ecLB_bWQ" contract="_W-AaIEHeEeq9h9ecLB_bWQ"/>
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_pwmWcEHeEeq9h9ecLB_bWQ" client="_ofuvsKIVEemmspchR1BZAQ" supplier="_pv0TUEHeEeq9h9ecLB_bWQ" contract="_pv0TUEHeEeq9h9ecLB_bWQ"/>
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_1aJMcEHeEeq9h9ecLB_bWQ" client="_ofuvsKIVEemmspchR1BZAQ" supplier="_1ZYXcEHeEeq9h9ecLB_bWQ" contract="_1ZYXcEHeEeq9h9ecLB_bWQ"/>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_58legOmaEemERe9a7AM7fg" client="_ofuvsKIVEemmspchR1BZAQ" supplier="_s0PR0KIVEemmspchR1BZAQ"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="__EFQQEHgEeq9h9ecLB_bWQ" client="_ofuvsKIVEemmspchR1BZAQ" supplier="_3lcUcEHgEeq9h9ecLB_bWQ"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Component" xmi:id="_s0PR0KIVEemmspchR1BZAQ" name="DB_Comparator"/>
+    <packagedElement xmi:type="uml:Component" xmi:id="_s0PR0KIVEemmspchR1BZAQ" name="DB_Comparator">
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_3mSB8EHgEeq9h9ecLB_bWQ" client="_s0PR0KIVEemmspchR1BZAQ" supplier="_3lcUcEHgEeq9h9ecLB_bWQ" contract="_3lcUcEHgEeq9h9ecLB_bWQ"/>
+    </packagedElement>
     <packagedElement xmi:type="uml:Interaction" xmi:id="_XXI7cKIzEemC55frPQGZ5Q" name="SD_MonitoringConditions_Refactored_">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_hE-5wKIzEemC55frPQGZ5Q" name="" type="_EGQAsDnUEemoANrv04JsgA"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_o4OMkKIzEemC55frPQGZ5Q" name="" type="_nIgicKIzEemC55frPQGZ5Q"/>
@@ -587,15 +630,25 @@ nient'altro</body>
       <message xmi:type="uml:Message" xmi:id="_49PlAKJXEemD4frwxdMXnA" name="Message118" messageSort="asynchCall" receiveEvent="_49QzIaJXEemD4frwxdMXnA" sendEvent="_49QzIKJXEemD4frwxdMXnA"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Component" xmi:id="_nIgicKIzEemC55frPQGZ5Q" name="TS_Distributor">
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_oCVM4EHVEeqZe9L98U6sGA" client="_nIgicKIzEemC55frPQGZ5Q" supplier="_oB4g8EHVEeqZe9L98U6sGA" contract="_oB4g8EHVEeqZe9L98U6sGA"/>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_Au9xQOmbEemERe9a7AM7fg" client="_nIgicKIzEemC55frPQGZ5Q" supplier="_GJuUUDnUEemoANrv04JsgA"/>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_BDnLkOmbEemERe9a7AM7fg" client="_nIgicKIzEemC55frPQGZ5Q" supplier="_EZr9gKI0EemC55frPQGZ5Q"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_j2MuMEHWEeq9h9ecLB_bWQ" client="_nIgicKIzEemC55frPQGZ5Q" supplier="_d_ahAEHWEeq9h9ecLB_bWQ"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_q2nc8EHWEeq9h9ecLB_bWQ" client="_nIgicKIzEemC55frPQGZ5Q" supplier="_luvkMEHWEeq9h9ecLB_bWQ"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Component" xmi:id="_EZr9gKI0EemC55frPQGZ5Q" name="TemperatureSensor1"/>
+    <packagedElement xmi:type="uml:Component" xmi:id="_EZr9gKI0EemC55frPQGZ5Q" name="TemperatureSensor1">
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_lvlRsEHWEeq9h9ecLB_bWQ" client="_EZr9gKI0EemC55frPQGZ5Q" supplier="_luvkMEHWEeq9h9ecLB_bWQ" contract="_luvkMEHWEeq9h9ecLB_bWQ"/>
+    </packagedElement>
     <packagedElement xmi:type="uml:Component" xmi:id="_2hXtYKI0EemC55frPQGZ5Q" name="SHS_Distributor">
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_EkPHIEHWEeqZe9L98U6sGA" client="_2hXtYKI0EemC55frPQGZ5Q" supplier="_Ejuw0EHWEeqZe9L98U6sGA" contract="_Ejuw0EHWEeqZe9L98U6sGA"/>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_B9muoOmbEemERe9a7AM7fg" client="_2hXtYKI0EemC55frPQGZ5Q" supplier="_772WYDpoEemzzZWhRxlHtQ"/>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_CRxn0OmbEemERe9a7AM7fg" client="_2hXtYKI0EemC55frPQGZ5Q" supplier="_O-XAsKI1EemC55frPQGZ5Q"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_ct7ZEEHYEeq9h9ecLB_bWQ" client="_2hXtYKI0EemC55frPQGZ5Q" supplier="_RKWBIEHYEeq9h9ecLB_bWQ"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_zMMV4EHYEeq9h9ecLB_bWQ" client="_2hXtYKI0EemC55frPQGZ5Q" supplier="_fbfykEHYEeq9h9ecLB_bWQ"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Component" xmi:id="_O-XAsKI1EemC55frPQGZ5Q" name="SoilHumiditySensor1"/>
+    <packagedElement xmi:type="uml:Component" xmi:id="_O-XAsKI1EemC55frPQGZ5Q" name="SoilHumiditySensor1">
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_fcFocEHYEeq9h9ecLB_bWQ" client="_O-XAsKI1EemC55frPQGZ5Q" supplier="_fbfykEHYEeq9h9ecLB_bWQ" contract="_fbfykEHYEeq9h9ecLB_bWQ"/>
+    </packagedElement>
     <packagedElement xmi:type="uml:Interaction" xmi:id="_NooO8KJYEemD4frwxdMXnA" name="SD_MonitoringConditions_Refactored">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_ZI3_AaJYEemD4frwxdMXnA" name="" type="_EGQAsDnUEemoANrv04JsgA"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_ckJzEaJYEemD4frwxdMXnA" name="" type="_nIgicKIzEemC55frPQGZ5Q"/>
@@ -874,9 +927,7 @@ nient'altro</body>
           <trigger xmi:type="uml:Trigger" xmi:id="_Nitf0KLqEemo2rHLNHQxKQ" event="_rBhmgDwZEemRoZ21IvU7Vw"/>
         </transition>
         <transition xmi:type="uml:Transition" xmi:id="_fVmSoKLqEemo2rHLNHQxKQ" source="_AoN_UKLqEemo2rHLNHQxKQ" target="_oPHGcKLpEemo2rHLNHQxKQ"/>
-        <transition xmi:type="uml:Transition" xmi:id="_wLO9kKLrEemo2rHLNHQxKQ" source="_AoN_UKLqEemo2rHLNHQxKQ" target="_oPHGcKLpEemo2rHLNHQxKQ">
-          <trigger xmi:type="uml:Trigger" xmi:id="_4GcgoKLrEemo2rHLNHQxKQ"/>
-        </transition>
+        <transition xmi:type="uml:Transition" xmi:id="_H_dtsEvjEeqxH6tkOquS5g" name="discardOutput" source="_AoN_UKLqEemo2rHLNHQxKQ" target="_oPHGcKLpEemo2rHLNHQxKQ"/>
         <subvertex xmi:type="uml:Pseudostate" xmi:id="_nOn50KLpEemo2rHLNHQxKQ" name="Initial"/>
         <subvertex xmi:type="uml:State" xmi:id="_oPHGcKLpEemo2rHLNHQxKQ" name="StandBy"/>
         <subvertex xmi:type="uml:State" xmi:id="_AoN_UKLqEemo2rHLNHQxKQ" name="RetrieveTemperatureData"/>
@@ -885,15 +936,38 @@ nient'altro</body>
     <packagedElement xmi:type="uml:StateMachine" xmi:id="_UqoS0KLsEemo2rHLNHQxKQ" name="TS_Distributor">
       <region xmi:type="uml:Region" xmi:id="_WD82MKLsEemo2rHLNHQxKQ" name="Region1">
         <transition xmi:type="uml:Transition" xmi:id="_btyMgKLsEemo2rHLNHQxKQ" source="_YD0cMKLsEemo2rHLNHQxKQ" target="_ZWI_sKLsEemo2rHLNHQxKQ"/>
-        <transition xmi:type="uml:Transition" xmi:id="_gvUzwKLsEemo2rHLNHQxKQ" source="_ZWI_sKLsEemo2rHLNHQxKQ" target="_dy3CoKLsEemo2rHLNHQxKQ">
-          <trigger xmi:type="uml:Trigger" xmi:id="_qPvaEKLsEemo2rHLNHQxKQ"/>
-        </transition>
+        <transition xmi:type="uml:Transition" xmi:id="_jcPL4EvjEeqxH6tkOquS5g" name="input" source="_ZWI_sKLsEemo2rHLNHQxKQ" target="_dy3CoKLsEemo2rHLNHQxKQ"/>
+        <transition xmi:type="uml:Transition" xmi:id="_ol_7AEvjEeqxH6tkOquS5g" source="_dy3CoKLsEemo2rHLNHQxKQ" target="_ZWI_sKLsEemo2rHLNHQxKQ"/>
         <subvertex xmi:type="uml:Pseudostate" xmi:id="_YD0cMKLsEemo2rHLNHQxKQ" name="Initial"/>
         <subvertex xmi:type="uml:State" xmi:id="_ZWI_sKLsEemo2rHLNHQxKQ" name="StandBy"/>
         <subvertex xmi:type="uml:State" xmi:id="_dy3CoKLsEemo2rHLNHQxKQ" name="SendInput"/>
       </region>
     </packagedElement>
     <packagedElement xmi:type="uml:Interface" xmi:id="_in5lIOmcEemyPOZl7rDv_A" name="notify"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_vUFYsEHUEeqZe9L98U6sGA" name="decreaseTemperature"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_NDpY4EHVEeqZe9L98U6sGA" name="raiseTemperature"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_oB4g8EHVEeqZe9L98U6sGA" name="getTemperatureData"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_4qQBYEHVEeqZe9L98U6sGA" name="getHumidityData"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_Ejuw0EHWEeqZe9L98U6sGA" name="getSoilHumidityData"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_d_ahAEHWEeq9h9ecLB_bWQ" name="getTemperatureData"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_luvkMEHWEeq9h9ecLB_bWQ" name="getTemperatureData"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_s9Bv0EHWEeq9h9ecLB_bWQ" name="getHumidityData"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_3zXAMEHWEeq9h9ecLB_bWQ" name="getHumidityData"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_RKWBIEHYEeq9h9ecLB_bWQ" name="getSoilHumidityData"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_fbfykEHYEeq9h9ecLB_bWQ" name="getSoilHumidityData"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_-UsUUEHYEeq9h9ecLB_bWQ" name="getEnvironmentThresholds"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_Hj5O0EHZEeq9h9ecLB_bWQ" name="getTemperatureThreshold"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_mRhZwEHZEeq9h9ecLB_bWQ" name="getHumidityThreshold"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_7Da7YEHZEeq9h9ecLB_bWQ" name="getSoilHumidityThreshold"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_uQfwkEHbEeq9h9ecLB_bWQ" name="getEnvironmentThresholds"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_e3vocEHcEeq9h9ecLB_bWQ" name="getTemperatureThreshold"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_zlJEkEHcEeq9h9ecLB_bWQ" name="getHumidityThreshold"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_VTU2cEHdEeq9h9ecLB_bWQ" name="getSoilHumidityThreshold"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_DDDuoEHeEeq9h9ecLB_bWQ" name="getEnvironmentThresholds"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_W-AaIEHeEeq9h9ecLB_bWQ" name="getTemperatureThreshold"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_pv0TUEHeEeq9h9ecLB_bWQ" name="getHumidityThreshold"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_1ZYXcEHeEeq9h9ecLB_bWQ" name="getSoilHumidityThreshold"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_3lcUcEHgEeq9h9ecLB_bWQ" name="compare"/>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_4SCEYDnWEemoANrv04JsgA">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_4SEgoDnWEemoANrv04JsgA" source="PapyrusVersion">
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_4SEgoTnWEemoANrv04JsgA" key="Version" value="0.0.1"/>
@@ -1186,4 +1260,5 @@ nient'altro</body>
   <DAM_Profile.DAM_UML_Extensions.System.Core:DaStep xmi:id="_PtJ-IKLqEemo2rHLNHQxKQ" base_NamedElement="_DXUp4KLqEemo2rHLNHQxKQ"/>
   <DAM_Profile.DAM_UML_Extensions.System.Core:DaComponent xmi:id="_EavBQONtEemLGYjOACyDJA" base_Classifier="_EZr9gKI0EemC55frPQGZ5Q"/>
   <DAM_Profile.DAM_UML_Extensions.System.Core:DaComponent xmi:id="__4an8OmTEemERe9a7AM7fg" base_Classifier="_ofuvsKIVEemmspchR1BZAQ"/>
+  <ActionLanguage:TextualRepresentation xmi:id="_hpbxgEvjEeqxH6tkOquS5g" language="org.eclipse.papyrus.uml.textedit.transition.xtext.UmlTransition"/>
 </xmi:XMI>
