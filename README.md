@@ -1,4 +1,4 @@
-# UML2GSPN
+# JASA: JTL-based framework for Availability analysis of Software Architecture
 
 This repository contains the artifacts created for the paper:
 ### From Software Architecture to Analysis Models and Back: <br/>Model-Driven Refactoring Aimed at Availability Improvement

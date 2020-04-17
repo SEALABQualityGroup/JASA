@@ -1,4 +1,4 @@
-transformation UMLDY-GSPN (uml:umlsm, pn:ptnet) {
+transformation UMLGSPN (uml:umlsm, pn:ptnet) {
 
     /***** UMLSD-GSPN *****/
 
